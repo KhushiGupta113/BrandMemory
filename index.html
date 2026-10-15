@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrandMemory — Editorial Provenance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FBFBFA;
+      --surface: #FFFFFF;
+      --surface-subtle: #F6F5F2;
+      --surface-border: #E4E4E7;
+      --ink-primary: #18181B;
+      --ink-secondary: #52525B;
+      --ink-tertiary: #71717A;
+      --primary: #4338CA;
+      --primary-hover: #3730A3;
+      --primary-tint: #EEF2FF;
+      --emerald: #059669;
+      --emerald-bg: #ECFDF5;
+      --amber: #D97706;
+      --amber-bg: #FFFBEB;
+      --rose: #E11D48;
+      --rose-bg: #FFF1F2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink-primary);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      padding: 2.5rem 2rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--surface-border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+    }
+
+    .badge-caps {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: var(--primary-tint);
+      border: 1px solid #C7D2FE;
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .demo-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      color: var(--amber);
+      background: var(--amber-bg);
+      border: 1px solid #FDE68A;
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--ink-primary);
+    }
+
+    .subtitle {
+      color: var(--ink-secondary);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      max-width: 720px;
+    }
+
+    .meta-bar {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      color: var(--ink-secondary);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.375rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 1px 2px 0 rgba(24, 24, 27, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px -2px rgba(24, 24, 27, 0.08);
+      border-color: #C7D2FE;
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--surface-border);
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-img-wrapper img {
+      transform: scale(1.02);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .screen-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--ink-tertiary);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+      letter-spacing: -0.015em;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-desc {
+      color: var(--ink-secondary);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      border-top: 1px solid var(--surface-border);
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #FFFFFF;
+      border: 1px solid var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-outline {
+      background: var(--surface);
+      color: var(--ink-primary);
+      border: 1px solid var(--surface-border);
+    }
+
+    .btn-outline:hover {
+      background: var(--surface-subtle);
+      border-color: #D4D4D8;
+    }
+
+    .screen-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      color: var(--ink-tertiary);
+    }
+
+    .design-specs {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .design-specs h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .palette-item {
+      border: 1px solid var(--surface-border);
+      border-radius: 0.375rem;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .swatch {
+      height: 48px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      padding: 0.625rem 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+    }
+
+    .swatch-name {
+      font-weight: 600;
+      color: var(--ink-primary);
+    }
+
+    .swatch-hex {
+      color: var(--ink-tertiary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="badge-caps">Editorial Provenance</span>
+          <span class="demo-tag">Sample Demo: Kalyani Botanicals</span>
+        </div>
+        <h1>BrandMemory Platform</h1>
+        <p class="subtitle">Multi-tenant AI marketing context engine grounded in authentic brand documents, multi-modal citations, and rigorous provenance verification.</p>
+      </div>
+      <div class="meta-bar">
+        <div class="meta-item">
+          <span class="material-symbols-outlined" style="font-size: 18px;">folder</span>
+          <span>Project ID: 4735385631369530472</span>
+        </div>
+        <div class="meta-item">
+          <span class="material-symbols-outlined" style="font-size: 18px;">layers</span>
+          <span>7 Active Screens</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- Screen 1 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/01_overview_dashboard.png" alt="Overview Dashboard Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 01</div>
+          <h2 class="card-title">Overview Dashboard</h2>
+          <p class="card-desc">Workspaces switching, document ingestion metrics, campaign activity, retrieval quality indicators, and recent generated outputs.</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: eb5aa4dd6c...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/01_overview_dashboard.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/01_overview_dashboard.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Screen 2 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/02_brand_workspace.png" alt="Brand Workspace Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 02</div>
+          <h2 class="card-title">Brand Workspace</h2>
+          <p class="card-desc">Brand voice definitions, target audience personas, approved claims library, prohibited phrases, and governance rules.</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: 1962b74c79...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/02_brand_workspace.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/02_brand_workspace.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Screen 3 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/03_knowledge_library.png" alt="Knowledge Library Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 03</div>
+          <h2 class="card-title">Knowledge Library</h2>
+          <p class="card-desc">Multi-format file upload (PDF, DOCX, TXT, MD), document versioning, approval status, AYUSH regulatory metadata, and chunk previews.</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: 94c241cc40...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/03_knowledge_library.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/03_knowledge_library.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Screen 4 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/04_content_studio.png" alt="Content Studio Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 04</div>
+          <h2 class="card-title">Content Studio</h2>
+          <p class="card-desc">Marketing content generation studio with granular source citations, interactive evidence inspector, and claim-support badges.</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: fe3a58c26e...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/04_content_studio.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/04_content_studio.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Screen 5 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/05_retrieval_inspector.png" alt="Retrieval Inspector Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 05</div>
+          <h2 class="card-title">Retrieval Inspector</h2>
+          <p class="card-desc">Side-by-side retrieval pipeline comparison between BM25 keyword search, dense vector embeddings, and hybrid Reciprocal Rank Fusion (RRF).</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: f3a700e27c...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/05_retrieval_inspector.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/05_retrieval_inspector.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Screen 6 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/06_evaluation_dashboard.png" alt="Evaluation Dashboard Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 06</div>
+          <h2 class="card-title">Evaluation Dashboard</h2>
+          <p class="card-desc">Quantitative evaluation tracking Recall@k, MRR, citation correctness, groundedness confidence, and inference latency (demo benchmarks).</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: f766e903aa...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/06_evaluation_dashboard.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/06_evaluation_dashboard.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Screen 7 -->
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img src="screens/07_document_conflict_review.png" alt="Document Conflict Review Preview" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="screen-num">Screen 07</div>
+          <h2 class="card-title">Document Conflict Review</h2>
+          <p class="card-desc">Side-by-side reconciliation of contradictory document versions with snippet-level evidence highlighting and human-in-the-loop sign-off.</p>
+          <div class="card-footer">
+            <span class="screen-id">ID: 9a01836aa2...</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="screens/07_document_conflict_review.png" target="_blank" class="btn btn-outline">Image</a>
+              <a href="screens/07_document_conflict_review.html" target="_blank" class="btn btn-primary">Open HTML</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <section class="design-specs">
+      <h2>Design System: Editorial Provenance</h2>
+      <p style="color: var(--ink-secondary); font-size: 0.9375rem; max-width: 800px; margin-bottom: 1.5rem;">
+        Engineered for mission-critical enterprise AI context engines. Rooted in forensic precision, paper-like surfaces, sharp typographic contrast, and restrained indigo accents.
+      </p>
+
+      <div class="palette-grid">
+        <div class="palette-item">
+          <div class="swatch" style="background: #FBFBFA; border-bottom: 1px solid #E4E4E7;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Canvas Base</div>
+            <div class="swatch-hex">#FBFBFA</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #FFFFFF; border-bottom: 1px solid #E4E4E7;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Surface Card</div>
+            <div class="swatch-hex">#FFFFFF</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #18181B;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Ink Primary</div>
+            <div class="swatch-hex">#18181B</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #4338CA;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Refined Indigo</div>
+            <div class="swatch-hex">#4338CA</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #059669;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Verified Emerald</div>
+            <div class="swatch-hex">#059669</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #D97706;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Pending Amber</div>
+            <div class="swatch-hex">#D97706</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #E11D48;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Conflict Rose</div>
+            <div class="swatch-hex">#E11D48</div>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="swatch" style="background: #E4E4E7;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Structural Stone</div>
+            <div class="swatch-hex">#E4E4E7</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

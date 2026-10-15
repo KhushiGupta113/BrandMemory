@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background text-on-surface" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrandMemory — Knowledge Library (Kalyani Botanicals)</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Verbatim Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#e4e1e6",
+            "surface-variant": "#e4e1e6",
+            "outline": "#777586",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#e0dee9",
+            "surface-container-low": "#f6f2f7",
+            "on-primary-container": "#c1beff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-surface": "#1b1b1e",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf8fc",
+            "on-tertiary-container": "#66daa8",
+            "tertiary-fixed-dim": "#68dba9",
+            "tertiary-container": "#005e40",
+            "on-surface-variant": "#464554",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-tint": "#5148d7",
+            "primary": "#2a14b4",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#e3dfff",
+            "on-primary-fixed": "#100069",
+            "background": "#fbf8fc",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0edf1",
+            "on-error": "#ffffff",
+            "tertiary": "#00442d",
+            "secondary": "#5e5e67",
+            "outline-variant": "#c7c4d7",
+            "surface-container-high": "#eae7eb",
+            "secondary-fixed-dim": "#c7c5d0",
+            "inverse-surface": "#303033",
+            "tertiary-fixed": "#85f8c4",
+            "secondary-fixed": "#e3e1ec",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#62626b",
+            "on-tertiary-fixed": "#002114",
+            "inverse-on-surface": "#f3f0f4",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#372abf",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#46464f",
+            "on-background": "#1b1b1e",
+            "surface-dim": "#dcd9dd",
+            "primary-container": "#4338ca",
+            "on-secondary-fixed": "#1a1b23",
+            "on-tertiary": "#ffffff",
+            "surface": "#fbf8fc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "mono-code": [
+              "JetBrains Mono"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "mono-citation": [
+              "JetBrains Mono"
+            ],
+            "display-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "display-lg-mobile": [
+              "Plus Jakarta Sans"
+            ],
+            "label-caps": [
+              "JetBrains Mono"
+            ],
+            "headline-md": [
+              "Plus Jakarta Sans"
+            ]
+          },
+          "fontSize": {
+            "body-md": [
+              "14px",
+              {
+                "lineHeight": "22px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-sm": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-lg": [
+              "16px",
+              {
+                "lineHeight": "26px",
+                "letterSpacing": "-0.005em",
+                "fontWeight": "400"
+              }
+            ],
+            "mono-code": [
+              "13px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-sm": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "mono-citation": [
+              "11px",
+              {
+                "lineHeight": "16px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "500"
+              }
+            ],
+            "display-lg": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.03em",
+                "fontWeight": "700"
+              }
+            ],
+            "display-lg-mobile": [
+              "28px",
+              {
+                "lineHeight": "34px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "label-caps": [
+              "10px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.08em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-md": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="h-full font-body-md text-body-md bg-background antialiased selection:bg-secondary-container selection:text-primary">
+<div class="min-h-screen flex">
+<!-- ========================================== -->
+<!-- SideNavBar (Shared Component)              -->
+<!-- ========================================== -->
+<aside class="h-screen w-64 flex flex-col fixed left-0 top-0 border-r border-outline-variant bg-surface-container-low z-40 justify-between p-space-md">
+<!-- Top Brand Anchor -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm px-space-xs py-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="spa">spa</span>
+</div>
+<div>
+<span class="text-headline-md font-headline-md font-semibold text-primary tracking-tight block">BrandMemory</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant block">Kalyani Botanicals</span>
+</div>
+</div>
+<!-- Ingest Document Quick CTA -->
+<button class="w-full py-space-sm px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm shadow-sm transition-colors duration-150">
+<span class="material-symbols-outlined text-[18px]" data-icon="upload_file">upload_file</span>
+<span>+ Ingest Document</span>
+</button>
+<!-- Navigation Tabs (7 tabs per Shared Component) -->
+<nav class="flex flex-col gap-1">
+<!-- Overview -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Brand Workspace -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_stories">auto_stories</span>
+<span>Brand Workspace</span>
+</a>
+<!-- Knowledge Library (ACTIVE: Semantic Match) -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm bg-secondary-container text-primary rounded-lg font-headline-sm text-headline-sm translate-x-0.5 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book" data-weight="fill" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span>Knowledge Library</span>
+</a>
+<!-- Content Studio -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit_note">edit_note</span>
+<span>Content Studio</span>
+</a>
+<!-- Retrieval Inspector -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="manage_search">manage_search</span>
+<span>Retrieval Inspector</span>
+</a>
+<!-- Evaluation Dashboard -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="monitoring">monitoring</span>
+<span>Evaluation Dashboard</span>
+</a>
+<!-- Conflict Review -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="rule">rule</span>
+<span>Conflict Review</span>
+</a>
+</nav>
+</div>
+<!-- Footer User & Status Meta -->
+<div class="border-t border-outline-variant pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]" data-icon="sync">sync</span>
+<span class="text-mono-citation font-mono-citation text-on-surface">Index Status (99.4%)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+</div>
+<div class="flex items-center gap-space-sm px-space-xs py-1 mt-1 rounded-lg hover:bg-surface-container-high cursor-pointer transition-colors duration-150">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant text-primary font-headline-sm text-headline-sm">
+            AR
+          </div>
+<div class="overflow-hidden">
+<div class="text-headline-sm font-headline-sm text-on-surface leading-tight truncate">Dr. Ananya Roy</div>
+<div class="text-mono-citation font-mono-citation text-on-surface-variant leading-tight">Lead Brand Scientist</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- ========================================== -->
+<!-- Main Shell Area (With TopNavBar)          -->
+<!-- ========================================== -->
+<div class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar (Contextual Header) -->
+<header class="docked full-width top-0 h-16 bg-surface-container-lowest border-b border-outline-variant shadow-sm z-30 flex items-center justify-between px-space-lg sticky">
+<!-- Left: Search & Scope Filter -->
+<div class="flex items-center gap-space-md flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]" data-icon="search">search</span>
+<input class="w-full pl-9 pr-12 py-1.5 bg-surface-bright border border-outline-variant rounded-lg text-body-sm font-body-sm text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search botanical dossiers, clinical vectors, or rules..." type="text"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-label-caps font-label-caps text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded border border-outline-variant">⌘K</span>
+</div>
+<!-- Navigation Breadcrumb Links from JSON -->
+<div class="hidden xl:flex items-center gap-space-sm text-body-sm font-body-sm text-on-surface-variant border-l border-outline-variant pl-space-md">
+<span class="hover:text-primary cursor-pointer">Kalyani Botanicals</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-medium">Production Model v3.2</span>
+<span class="text-outline">/</span>
+<span class="text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200 px-1.5 py-0.5 rounded">Production Index</span>
+</div>
+</div>
+<!-- Right Trailing Actions & Icons -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant border-r border-outline-variant pr-space-md">
+<button class="p-2 rounded hover:bg-surface-container transition-colors duration-150 relative text-on-surface-variant" title="Notifications">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 rounded hover:bg-surface-container transition-colors duration-150 text-on-surface-variant" title="Documentation">
+<span class="material-symbols-outlined text-[20px]" data-icon="help_outline">help_outline</span>
+</button>
+<button class="p-2 rounded hover:bg-surface-container transition-colors duration-150 text-on-surface-variant" title="Engine Tuning">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</div>
+<button class="px-space-md py-1.5 border border-outline-variant rounded-lg text-body-sm font-body-sm font-medium hover:bg-surface-container transition-colors duration-150 text-on-surface">
+            + Ingest Document
+          </button>
+<button class="px-space-md py-1.5 bg-primary-container hover:bg-primary text-on-primary rounded-lg text-body-sm font-body-sm font-medium transition-colors duration-150 shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="bolt">bolt</span>
+<span>New Studio Prompt</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas Content -->
+<main class="flex-1 p-space-lg flex flex-col gap-space-lg bg-surface">
+<!-- ========================================== -->
+<!-- Drag-and-Drop Ingestion Banner             -->
+<!-- ========================================== -->
+<section class="border border-dashed border-outline-variant hover:border-primary-container bg-surface-container-lowest rounded-xl p-space-md transition-all duration-200 group">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[28px]" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-2">
+<span>Canonical Ingestion Zone</span>
+<span class="text-label-caps font-label-caps bg-secondary-container text-primary px-1.5 py-0.5 rounded font-mono-citation">VECTOR-PIPE-v4</span>
+</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                  Drag and drop canonical PDFs, clinical dossiers, or regulatory briefs (Supported: PDF, DOCX, MD, TXT up to 50MB).
+                </p>
+</div>
+</div>
+<!-- Quick Template Action Pills -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="text-label-caps font-label-caps text-on-surface-variant mr-1">Rapid Pipelines:</span>
+<button class="px-2.5 py-1 bg-surface-container text-on-surface hover:border-primary-container hover:text-primary border border-outline-variant rounded-lg text-mono-citation font-mono-citation transition-colors">
+                + Add Clinical Trial
+              </button>
+<button class="px-2.5 py-1 bg-surface-container text-on-surface hover:border-primary-container hover:text-primary border border-outline-variant rounded-lg text-mono-citation font-mono-citation transition-colors">
+                + Add AYUSH Standard
+              </button>
+<button class="px-2.5 py-1 bg-surface-container text-on-surface hover:border-primary-container hover:text-primary border border-outline-variant rounded-lg text-mono-citation font-mono-citation transition-colors">
+                + Add Campaign Brief
+              </button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- Ingestion Pipeline Stats Bar              -->
+<!-- ========================================== -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg px-space-md py-space-sm flex flex-wrap items-center justify-between gap-y-2 gap-x-4 shadow-sm">
+<div class="flex flex-wrap items-center gap-x-space-lg gap-y-1 text-mono-citation font-mono-citation text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="description">description</span>
+<strong class="text-on-surface font-semibold">142</strong> Active Documents
+            </div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="data_array">data_array</span>
+<strong class="text-on-surface font-semibold">4,120</strong> Processed Chunks
+            </div>
+<span class="text-outline-variant">•</span>
+<div>
+              Average Chunk Size: <strong class="text-on-surface font-semibold">384 Tokens</strong> <span class="text-outline">(50 Token Overlap)</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+              Embedding Model: <span class="bg-surface-container px-1 py-0.5 rounded text-on-surface font-mono-code text-[10px]">text-embedding-3-large (1536 dim) + BM25 Inverted Index</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Status: Healthy / 100% Synced
+            </span>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- Main Document Management & Inspection Grid -->
+<!-- 2-Pane Workbench (55% / 45%)               -->
+<!-- ========================================== -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANE: Document Table (55% -> 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col shadow-sm overflow-hidden">
+<!-- Filter Tabs -->
+<div class="border-b border-outline-variant bg-surface-container-low px-space-md pt-2 flex flex-wrap gap-1">
+<button class="px-3 py-2 text-headline-sm font-headline-sm text-primary border-b-2 border-primary text-body-sm font-medium">
+                All Documents <span class="text-mono-citation font-mono-citation ml-1 opacity-70">(142)</span>
+</button>
+<button class="px-3 py-2 text-on-surface-variant hover:text-on-surface text-body-sm font-medium border-b-2 border-transparent transition-colors">
+                Clinical &amp; Efficacy Trials <span class="text-mono-citation font-mono-citation ml-1 opacity-70">(48)</span>
+</button>
+<button class="px-3 py-2 text-on-surface-variant hover:text-on-surface text-body-sm font-medium border-b-2 border-transparent transition-colors">
+                Regulatory &amp; AYUSH <span class="text-mono-citation font-mono-citation ml-1 opacity-70">(36)</span>
+</button>
+<button class="px-3 py-2 text-on-surface-variant hover:text-on-surface text-body-sm font-medium border-b-2 border-transparent transition-colors">
+                Brand Guidelines <span class="text-mono-citation font-mono-citation ml-1 opacity-70">(24)</span>
+</button>
+<button class="px-3 py-2 text-on-surface-variant hover:text-on-surface text-body-sm font-medium border-b-2 border-transparent transition-colors">
+                Campaign Briefs <span class="text-mono-citation font-mono-citation ml-1 opacity-70">(34)</span>
+</button>
+</div>
+<!-- Filter and Table Control Bar -->
+<div class="p-space-md border-b border-outline-variant flex items-center justify-between gap-space-md bg-surface-container-lowest">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]" data-icon="filter_list">filter_list</span>
+<input class="w-full pl-8 pr-3 py-1.5 text-body-sm font-body-sm bg-surface-bright border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Filter documents by title, author, or ingredient keyword..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1.5 border border-outline-variant rounded hover:bg-surface-container transition-colors" title="Sort Order">
+<span class="material-symbols-outlined text-[18px]" data-icon="swap_vert">swap_vert</span>
+</button>
+<button class="p-1.5 border border-outline-variant rounded hover:bg-surface-container transition-colors" title="Table View Settings">
+<span class="material-symbols-outlined text-[18px]" data-icon="view_column">view_column</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table View -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-label-caps font-label-caps text-on-surface-variant">
+<th class="py-2.5 px-space-md">Document Name</th>
+<th class="py-2.5 px-space-sm">Category</th>
+<th class="py-2.5 px-space-sm">Ver.</th>
+<th class="py-2.5 px-space-sm">Chunks</th>
+<th class="py-2.5 px-space-sm">Embedding</th>
+<th class="py-2.5 px-space-sm">Approval</th>
+<th class="py-2.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<!-- Row 1: Selected / Active -->
+<tr class="bg-secondary-container/40 hover:bg-secondary-container/60 transition-colors cursor-pointer border-l-4 border-l-primary-container">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">Kalyani_Clinical_Trials_Bakuchiol_2024_v2.pdf</div>
+<div class="text-mono-citation font-mono-citation text-on-surface-variant">4.8 MB • Hash: 8f4c…109d</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container border border-outline-variant text-on-surface">Clinical Trial</span>
+</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface-variant whitespace-nowrap">v2.0</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface font-medium whitespace-nowrap">48 Chunks</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        Ready
+                      </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 text-mono-citation font-mono-citation text-primary-container">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user">verified_user</span>
+                        Dr. Roy
+                      </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-snug">AYUSH_Regulatory_Compliance_Standard_Q3.pdf</div>
+<div class="text-mono-citation font-mono-citation text-on-surface-variant">12.1 MB • Hash: d21e…440b</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container border border-outline-variant text-on-surface">Regulatory</span>
+</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface-variant whitespace-nowrap">v3.2</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface font-medium whitespace-nowrap">112 Chunks</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        Ready
+                      </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 text-mono-citation font-mono-citation text-emerald-700">
+<span class="material-symbols-outlined text-[14px]" data-icon="gavel">gavel</span>
+                        Verified Legal
+                      </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Indexing state -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="article">article</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-snug">Kumkumadi_Night_Oil_Formulation_Spec_v3.1.docx</div>
+<div class="text-mono-citation font-mono-citation text-on-surface-variant">2.4 MB • Ingestion in progress</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container border border-outline-variant text-on-surface">Formulation</span>
+</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface-variant whitespace-nowrap">v3.1</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface font-medium whitespace-nowrap">60 Chunks</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<div class="w-28 flex flex-col gap-1">
+<div class="flex justify-between text-mono-citation font-mono-citation text-primary">
+<span>Indexing</span>
+<span>40%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full animate-pulse" style="width: 40%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 text-mono-citation font-mono-citation text-amber-700">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_empty">hourglass_empty</span>
+                        Pending QA
+                      </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="markdown">markdown</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-snug">Diwali_2024_Omnichannel_Brief.md</div>
+<div class="text-mono-citation font-mono-citation text-on-surface-variant">180 KB • Hash: a931…782c</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container border border-outline-variant text-on-surface">Marketing Brief</span>
+</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface-variant whitespace-nowrap">v1.0</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface font-medium whitespace-nowrap">14 Chunks</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        Ready
+                      </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 text-mono-citation font-mono-citation text-emerald-700">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                        Approved
+                      </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Flagged / Superseded -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer bg-rose-50/20">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-600 text-[20px]" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-snug line-through text-outline">Kalyani_2023_Early_Formulation_PR_Kit.pdf</div>
+<div class="text-mono-citation font-mono-citation text-rose-600">Deprecated • Conflict detected with 2024 AYUSH directive</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container border border-outline-variant text-on-surface">Legacy PR</span>
+</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface-variant whitespace-nowrap">v1.1</td>
+<td class="py-3 px-space-sm text-mono-code font-mono-code text-on-surface font-medium whitespace-nowrap">22 Chunks</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-mono-citation font-mono-citation bg-amber-50 text-amber-700 border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        Superseded
+                      </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-caps font-label-caps bg-rose-100 text-rose-800 border border-rose-300">
+<span class="material-symbols-outlined text-[12px]" data-icon="warning">warning</span>
+                        Flagged Conflict
+                      </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Selection Summary -->
+<div class="border-t border-outline-variant p-space-sm bg-surface-container-low flex items-center justify-between text-mono-citation font-mono-citation text-on-surface-variant">
+<div>Displaying 5 of 142 documents • 1 document selected</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container-lowest border border-outline-variant text-on-surface disabled:opacity-50" disabled="">Previous</button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest border border-outline-variant text-on-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: Document Inspector & Chunk Preview (45% -> 5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col shadow-sm">
+<!-- Inspector Header with Canonical Actions -->
+<div class="p-space-md border-b border-outline-variant">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps bg-indigo-50 text-primary-container border border-indigo-200 px-1.5 py-0.5 rounded">INSPECTION ACTIVE</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">ID: DOC-KB-2024-098</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mt-1 break-all">
+                    Kalyani_Clinical_Trials_Bakuchiol_2024_v2.pdf
+                  </h3>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant border border-outline-variant" title="Download Canonical PDF">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant border border-outline-variant" title="View Vector Points">
+<span class="material-symbols-outlined text-[18px]" data-icon="hub">hub</span>
+</button>
+</div>
+</div>
+<!-- Action Bar for Inspector -->
+<div class="flex items-center gap-space-xs mt-3">
+<button class="px-2.5 py-1 text-mono-citation font-mono-citation bg-primary-container hover:bg-primary text-on-primary rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]" data-icon="refresh">refresh</span>
+                  Re-embed Chunks
+                </button>
+<button class="px-2.5 py-1 text-mono-citation font-mono-citation bg-surface-container text-on-surface hover:bg-surface-container-high border border-outline-variant rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]" data-icon="schema">schema</span>
+                  View Vector Points
+                </button>
+<button class="px-2.5 py-1 text-mono-citation font-mono-citation bg-surface-container text-on-surface hover:bg-surface-container-high border border-outline-variant rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]" data-icon="download">download</span>
+                  Canonical PDF
+                </button>
+</div>
+</div>
+<!-- Metadata Grid -->
+<div class="p-space-md border-b border-outline-variant bg-surface-container-low/60">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-space-md text-mono-citation font-mono-citation">
+<div>
+<span class="text-on-surface-variant block">Format:</span>
+<span class="text-on-surface font-semibold">PDF Document</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">File Size:</span>
+<span class="text-on-surface font-semibold">4.8 MB</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Page Count:</span>
+<span class="text-on-surface font-semibold">28 Pages</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Total Tokens:</span>
+<span class="text-on-surface font-semibold">18,450 Tokens</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Ingested Date:</span>
+<span class="text-on-surface font-semibold">Oct 12, 2024</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Sign-off Authority:</span>
+<span class="text-primary-container font-semibold">Dr. Ananya Roy</span>
+</div>
+</div>
+</div>
+<!-- Interactive 'Extracted Chunks' Browser -->
+<div class="p-space-md flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<span class="text-headline-sm font-headline-sm text-on-surface">Extracted Chunks (Tokenized)</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Showing 1 of 48</span>
+</div>
+<!-- Chunk Tabs Selector -->
+<div class="flex items-center gap-1 border-b border-outline-variant pb-1">
+<button class="px-3 py-1 bg-secondary-container text-primary rounded font-mono-code text-mono-code font-semibold flex items-center gap-1 text-[12px]">
+<span>Chunk #14</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</button>
+<button class="px-3 py-1 hover:bg-surface-container text-on-surface-variant rounded font-mono-code text-mono-code text-[12px]">
+                  Chunk #15
+                </button>
+<button class="px-3 py-1 hover:bg-surface-container text-on-surface-variant rounded font-mono-code text-mono-code text-[12px]">
+                  Chunk #16
+                </button>
+<button class="px-2 py-1 text-on-surface-variant hover:text-on-surface ml-auto text-mono-citation font-mono-citation flex items-center gap-0.5">
+<span>All Chunks</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Selected Chunk #14 Content Card -->
+<div class="border border-outline-variant rounded-lg p-space-md bg-surface-bright flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">
+                    Section 3.1: Topical Tolerance &amp; Phototoxicity Test
+                  </div>
+<span class="text-label-caps font-label-caps bg-surface-container text-on-surface px-1.5 py-0.5 rounded border border-outline-variant">
+                    Tokens: 246
+                  </span>
+</div>
+<!-- Text Preview Box with Monospace and Semantic Highlights -->
+<div class="font-mono-code text-mono-code text-on-surface leading-relaxed p-space-sm bg-surface-container-lowest border border-outline-variant rounded text-[12px]">
+                  "...In human patch test evaluations conducted across <mark class="bg-indigo-100 text-primary-container px-1 py-0.5 rounded font-semibold">n=84 healthy Indian subjects</mark>, topical formulation containing <mark class="bg-indigo-100 text-primary-container px-1 py-0.5 rounded font-semibold">1.0% w/w Bakuchiol (Psoralea corylifolia seed extract)</mark> showed <mark class="bg-emerald-100 text-emerald-800 px-1 py-0.5 rounded font-semibold">zero phototoxic reactions</mark> under direct simulated UV light (300-400nm wavelength). Unlike conventional retinoids, no erythema or photosensitizing downtime was observed over 12 weeks of continuous daily administration..."
+                </div>
+<!-- Associated Metadata Tags -->
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant mr-1">Entities:</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-secondary-container text-on-surface">Category: Phototoxicity</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-secondary-container text-on-surface">Target Ingredient: Bakuchiol 1%</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">Confidence: 0.992</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface border border-outline-variant">KB-REF-CLIN-04</span>
+</div>
+</div>
+<!-- Usage in Generative Studio Panel -->
+<div class="mt-2 p-space-sm bg-emerald-50/60 border border-emerald-200 rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-emerald-700 text-[20px] mt-0.5" data-icon="verified">verified</span>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-emerald-950 text-sm">Usage in Generative Studio</h4>
+<p class="text-body-sm font-body-sm text-emerald-900 mt-0.5">
+                    Cited in <strong>18 live campaigns</strong> and <strong>4 ad copy variants</strong> with zero reported factual divergence.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+</body></html>

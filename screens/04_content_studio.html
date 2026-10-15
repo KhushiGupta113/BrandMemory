@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Content Studio | BrandMemory - Kalyani Botanicals</title>
+<!-- Google Fonts & Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#e4e1e6",
+            "surface-variant": "#e4e1e6",
+            "outline": "#777586",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#e0dee9",
+            "surface-container-low": "#f6f2f7",
+            "on-primary-container": "#c1beff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-surface": "#1b1b1e",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf8fc",
+            "on-tertiary-container": "#66daa8",
+            "tertiary-fixed-dim": "#68dba9",
+            "tertiary-container": "#005e40",
+            "on-surface-variant": "#464554",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-tint": "#5148d7",
+            "primary": "#2a14b4",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#e3dfff",
+            "on-primary-fixed": "#100069",
+            "background": "#fbf8fc",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0edf1",
+            "on-error": "#ffffff",
+            "tertiary": "#00442d",
+            "secondary": "#5e5e67",
+            "outline-variant": "#c7c4d7",
+            "surface-container-high": "#eae7eb",
+            "secondary-fixed-dim": "#c7c5d0",
+            "inverse-surface": "#303033",
+            "tertiary-fixed": "#85f8c4",
+            "secondary-fixed": "#e3e1ec",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#62626b",
+            "on-tertiary-fixed": "#002114",
+            "inverse-on-surface": "#f3f0f4",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#372abf",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#46464f",
+            "on-background": "#1b1b1e",
+            "surface-dim": "#dcd9dd",
+            "primary-container": "#4338ca",
+            "on-secondary-fixed": "#1a1b23",
+            "on-tertiary": "#ffffff",
+            "surface": "#fbf8fc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "mono-code": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-citation": ["JetBrains Mono"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-citation": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F6F5F2;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #D4D4D8;
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #A1A1AA;
+    }
+  </style>
+</head>
+<body class="bg-[#FBFBFA] text-on-surface antialiased h-screen overflow-hidden flex flex-col font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- ========================================================== -->
+<!-- 1. PERSISTENT APPLICATION SHELL: SIDEBAR NAVIGATION        -->
+<!-- ========================================================== -->
+<aside class="h-screen w-64 flex flex-col fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant z-40 justify-between p-space-md">
+<!-- Top Brand Area -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm px-space-xs py-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="spa" data-weight="fill" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-headline-md font-headline-md font-semibold text-primary tracking-tight">BrandMemory</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider uppercase">Kalyani Botanicals</span>
+</div>
+</div>
+<!-- Quick Action CTA -->
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md bg-surface-container-lowest border border-outline-variant rounded-lg text-headline-sm font-headline-sm text-on-surface hover:bg-surface-container-high transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="upload_file">upload_file</span>
+<span>+ Ingest Document</span>
+</button>
+<!-- Navigation Tabs (Active: 'Content Studio') -->
+<nav class="flex flex-col gap-1 mt-space-xs">
+<!-- Overview -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Brand Workspace -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Brand Workspace</span>
+</a>
+<!-- Knowledge Library -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Knowledge Library</span>
+</a>
+<!-- Content Studio (MANDATORY ACTIVE TAB) -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm bg-secondary-container text-primary rounded-lg font-headline-sm text-headline-sm translate-x-0.5 transition-transform duration-100 shadow-sm" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note" data-weight="fill" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span>Content Studio</span>
+</a>
+<!-- Retrieval Inspector -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="manage_search">manage_search</span>
+<span>Retrieval Inspector</span>
+</a>
+<!-- Evaluation Dashboard -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Evaluation Dashboard</span>
+</a>
+<!-- Conflict Review -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="rule">rule</span>
+<span>Conflict Review</span>
+</a>
+</nav>
+</div>
+<!-- Sidebar Bottom System Metadata -->
+<div class="flex flex-col gap-space-xs pt-space-sm border-t border-outline-variant">
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container text-mono-citation font-mono-citation text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Index Status</span>
+</span>
+<span class="font-semibold text-primary">99.4%</span>
+</div>
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary font-mono-code font-semibold text-xs">
+          AR
+        </div>
+<div class="flex flex-col leading-none truncate">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Dr. Ananya Roy</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant text-[10px]">Lead Brand Scientist</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- ========================================================== -->
+<!-- 2. APPLICATION TOP CONTEXTUAL BAR                          -->
+<!-- ========================================================== -->
+<header class="h-16 ml-64 bg-surface-container-lowest border-b border-outline-variant flex items-center justify-between px-space-lg z-30 shrink-0">
+<!-- Left Context Breadcrumb & Campaign Selector -->
+<div class="flex items-center gap-space-md">
+<!-- Active Brand Badge -->
+<div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded-lg border border-outline-variant">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Kalyani Botanicals</span>
+<span class="text-mono-citation font-mono-citation bg-primary-fixed text-primary px-1.5 py-0.2 rounded font-semibold text-[10px]">v3.2 Production</span>
+</div>
+<span class="text-outline-variant">/</span>
+<!-- Campaign Dropdown Selector -->
+<div class="relative flex items-center">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-surface-bright border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-amber-600 text-sm" data-icon="festival">festival</span>
+<span class="font-semibold">Diwali Launch 2024 - Radiant Rituals</span>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Right Header CTAs & Tool Cluster -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 border-r border-outline-variant pr-space-md">
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Engine Context Tune">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Documentation">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<!-- Secondary Export Action -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-sm font-body-sm font-medium text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+<span>Copy Markdown</span>
+</button>
+<!-- Primary Action -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary-container text-on-primary rounded-lg text-body-sm font-body-sm font-semibold hover:bg-primary shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-sm" data-icon="ios_share">ios_share</span>
+<span>Export Campaign</span>
+</button>
+</div>
+</header>
+<!-- ========================================================== -->
+<!-- 3. MAIN WORKBENCH: 3-PANEL PRODUCTION WORKSPACE             -->
+<!-- ========================================================== -->
+<main class="ml-64 flex-1 flex overflow-hidden bg-[#FBFBFA]">
+<!-- -------------------------------------------------------- -->
+<!-- PANEL 1: PROMPT CONFIGURATION & GUARDRAIL CONTROLS (28%) -->
+<!-- -------------------------------------------------------- -->
+<section class="w-[28%] border-r border-outline-variant flex flex-col h-full bg-surface-container-lowest overflow-hidden">
+<!-- Section Header -->
+<div class="px-space-md py-space-sm border-b border-outline-variant flex items-center justify-between bg-surface-container-low shrink-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="sliders">tune</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Guardrail Prompt Config</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant bg-surface-container px-2 py-0.5 rounded border border-outline-variant">P-04 CONSTRAINED</span>
+</div>
+<!-- Configuration Form (Scrollable) -->
+<div class="p-space-md flex-1 overflow-y-auto custom-scroll flex flex-col gap-space-md">
+<!-- 1. Output Format Selector -->
+<div>
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-1.5">OUTPUT FORMAT</label>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-primary text-on-primary font-semibold shadow-xs">
+              Instagram Caption
+            </button>
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+              Meta Ad Copy
+            </button>
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+              Campaign Brief
+            </button>
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+              Email Newsletter
+            </button>
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+              Video Script
+            </button>
+</div>
+</div>
+<!-- 2. Target Product Dropdown -->
+<div>
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-1">TARGET PRODUCT</label>
+<div class="relative">
+<select class="w-full text-body-sm font-body-sm rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 pr-8 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all appearance-none cursor-pointer">
+<option selected="">Bakuchiol Renewal Night Serum 1% + Gotu Kola</option>
+<option>Kumkumadi Illuminating Elixir (10% Saffron Extract)</option>
+<option>Ashwagandha Restorative Barrier Cream</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant text-sm" data-icon="unfold_more">unfold_more</span>
+</div>
+<div class="mt-1 flex items-center gap-1.5 text-mono-citation font-mono-citation text-emerald-700">
+<span class="material-symbols-outlined text-xs" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Ayush Dossier Indexed • KB-CLIN-2024</span>
+</div>
+</div>
+<!-- 3. Target Audience -->
+<div>
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-1">TARGET AUDIENCE SEGMENT</label>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded-lg text-body-sm font-body-sm text-on-surface leading-snug">
+            Affluent urban women 28-45 seeking clinical botanical skincare alternatives to Retinol.
+          </div>
+</div>
+<!-- 4. Tone of Voice Calibration -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-label-caps font-label-caps text-on-surface-variant">TONE MATRIX MULTI-SELECT</label>
+<span class="text-mono-citation font-mono-citation text-primary font-medium">Tri-harmonic</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE]">
+<span class="material-symbols-outlined text-xs" data-icon="check">check</span> Clinical Authority
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE]">
+<span class="material-symbols-outlined text-xs" data-icon="check">check</span> Warm Ayurvedic Poetry
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE]">
+<span class="material-symbols-outlined text-xs" data-icon="check">check</span> Understated Luxury
+            </span>
+</div>
+</div>
+<!-- 5. Active Guardrail Filters (The Zero-Hallucination Controls) -->
+<div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant flex flex-col gap-2.5">
+<div class="text-label-caps font-label-caps text-on-surface font-semibold flex items-center justify-between">
+<span>RAG SAFETY GUARDRAILS</span>
+<span class="material-symbols-outlined text-emerald-600 text-sm" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Strict Grounding Mode</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant text-[10px]">Assert facts strictly cited in library</span>
+</div>
+<div class="w-8 h-4.5 bg-primary-container rounded-full relative cursor-pointer flex items-center px-0.5">
+<div class="w-3.5 h-3.5 bg-white rounded-full translate-x-3.5 transition-transform"></div>
+</div>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/50">
+<div class="flex flex-col">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Auto-Reject Prohibited Phrases</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant text-[10px]">AYUSH Schedule E-1 compliance</span>
+</div>
+<div class="w-8 h-4.5 bg-primary-container rounded-full relative cursor-pointer flex items-center px-0.5">
+<div class="w-3.5 h-3.5 bg-white rounded-full translate-x-3.5 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- 6. Prompt Input Box -->
+<div class="flex-1 flex flex-col">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-1">PROMPT DIRECTIVE</label>
+<div class="relative flex-1">
+<textarea class="w-full h-full min-h-[110px] p-2.5 text-body-sm font-body-sm text-on-surface bg-surface-container-lowest border border-outline-variant rounded-lg resize-none focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none leading-relaxed" placeholder="Enter generative prompt...">Draft a high-conversion Instagram caption highlighting clinical study results comparing our 1% Bakuchiol serum to 0.5% synthetic retinol. Emphasize zero photo-sensitivity and gentle efficacy for sensitive Indian skin types during festive season.</textarea>
+<div class="absolute right-2 bottom-2 text-mono-citation font-mono-citation text-outline">
+              246 chars
+            </div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-space-md border-t border-outline-variant bg-surface-container-lowest shrink-0">
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm transition-all shadow-sm active:scale-[0.99]">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span>Generate Grounded Copy</span>
+<span class="ml-1 text-mono-citation font-mono-citation bg-white/20 text-white px-1.5 py-0.5 rounded text-[10px]">⌘↵</span>
+</button>
+</div>
+</section>
+<!-- -------------------------------------------------------- -->
+<!-- PANEL 2: GENERATED CONTENT EDITOR & VERIFICATION (42%)    -->
+<!-- -------------------------------------------------------- -->
+<section class="w-[42%] border-r border-outline-variant flex flex-col h-full bg-[#FFFFFF] overflow-hidden">
+<!-- Editor Header & Evidence Metrics -->
+<div class="px-space-md py-space-sm border-b border-outline-variant flex items-center justify-between bg-surface-container-lowest shrink-0">
+<div class="flex items-center gap-2">
+<!-- Version selector -->
+<div class="flex items-center bg-surface-container rounded border border-outline-variant p-0.5">
+<button class="px-2 py-0.5 text-mono-citation font-mono-citation font-semibold bg-surface-container-lowest text-primary rounded shadow-xs">Draft v2</button>
+<button class="px-2 py-0.5 text-mono-citation font-mono-citation text-on-surface-variant hover:text-on-surface">Draft v1</button>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">· 184 words</span>
+</div>
+<!-- Evidence Score Pill -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-[#ECFDF5] border border-[#A7F3D0] rounded-full">
+<span class="w-2 h-2 rounded-full bg-[#059669]"></span>
+<span class="text-mono-citation font-mono-citation text-[#059669] font-semibold">Evidence Score: 98% Grounded</span>
+</div>
+</div>
+<!-- Live Interactive Editor Surface (Middle Content) -->
+<div class="flex-1 p-space-lg overflow-y-auto custom-scroll flex flex-col gap-space-md">
+<!-- Visual Format Badge -->
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-on-surface-variant pb-2 border-b border-surface-container">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span>
+            @kalyanibotanicals • Instagram Grid Post Copy
+          </span>
+<span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Zero Hallucination Flagged</span>
+</div>
+<!-- Editorial Copy with Interactive Citation Anchors -->
+<div class="space-y-4 font-body-lg text-body-lg text-on-surface leading-relaxed">
+<p>
+            Meet your gentle evening ritual. ✨
+            <button class="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#EEF2FF] text-[#4338CA] text-mono-citation font-mono-citation font-bold border border-[#C7D2FE] align-super hover:scale-110 transition-transform ml-0.5">[1]</button>
+</p>
+<p class="relative group">
+            While traditional retinol often triggers redness and peeling under the humid Indian climate, our Bakuchiol Renewal Serum delivers
+            <span class="bg-emerald-50 border-b-2 border-emerald-500 font-medium px-0.5 text-emerald-950 transition-colors">
+              identical collagen-support efficacy with zero photo-sensitivity
+            </span>
+<button class="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#ECFDF5] text-[#059669] text-mono-citation font-mono-citation font-bold border border-[#A7F3D0] align-super hover:scale-110 transition-transform ml-0.5">[2]</button>.
+          </p>
+<p>
+            In our 12-week double-blind clinical trial with 84 Indian participants,
+            <span class="bg-emerald-50 border-b-2 border-emerald-500 font-medium px-0.5 text-emerald-950">
+              92% reported visible barrier firmness and a 28% reduction in hyperpigmentation
+            </span>
+<button class="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#ECFDF5] text-[#059669] text-mono-citation font-mono-citation font-bold border border-[#A7F3D0] align-super hover:scale-110 transition-transform ml-0.5">[3]</button>.
+            Formulated with cold-pressed Gotu Kola and 1% pure botanical Bakuchiol, this treatment requires no acclimation period
+            <button class="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#EEF2FF] text-[#4338CA] text-mono-citation font-mono-citation font-bold border border-[#C7D2FE] align-super hover:scale-110 transition-transform ml-0.5">[4]</button>.
+          </p>
+<p class="relative">
+            Pair with our Kumkumadi Oil for deep overnight replenishment
+            <button class="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#FFFBEB] text-[#D97706] text-mono-citation font-mono-citation font-bold border border-[#FDE68A] align-super hover:scale-110 transition-transform ml-0.5">[5]</button>.
+          </p>
+<p class="text-on-surface font-medium pt-1">
+            Available now at our flagship boutiques and online at <span class="text-primary underline">kalyanibotanicals.in</span> 🌿
+          </p>
+<p class="text-body-sm font-body-sm text-outline pt-2 font-mono-citation">
+            #KalyaniBotanicals #BakuchiolSerum #AyurvedicScience #DiwaliRadiance #FestiveSkincare #CleanClinical
+          </p>
+</div>
+<!-- Annotation Cards Box -->
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex flex-col gap-2">
+<!-- Annotation 1 -->
+<div class="flex items-start gap-2 p-2 bg-[#ECFDF5]/60 border border-[#A7F3D0] rounded-lg">
+<span class="material-symbols-outlined text-[#059669] text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<div class="text-body-sm font-body-sm">
+<span class="font-semibold text-emerald-900">[Claim 2 &amp; 3 Verified]:</span>
+<span class="text-emerald-800"> Grounded in Clinical Trial Report 2024 &amp; Dr. Roy Lab Study p.14.</span>
+</div>
+</div>
+<!-- Annotation 2 Warning -->
+<div class="flex items-start gap-2 p-2.5 bg-[#FFFBEB] border border-[#FDE68A] rounded-lg">
+<span class="material-symbols-outlined text-[#D97706] text-sm mt-0.5" data-icon="warning">warning</span>
+<div class="text-body-sm font-body-sm leading-snug">
+<span class="font-semibold text-amber-900">Annotation Note [5]:</span>
+<span class="text-amber-800"> Recommends Kumkumadi Oil pairing — verified against Brand Ritual Guide v2.1, but note contraindication warning for active acne prone skin types.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editor Bottom Workflow Actions Bar -->
+<div class="p-space-md border-t border-outline-variant bg-surface-container-low flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-sm font-body-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="copy_all">copy_all</span>
+<span>Copy with Citations</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-sm font-body-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="bookmark">bookmark</span>
+<span>Save to Campaign</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-mono-citation font-mono-citation text-primary hover:underline px-2 py-1">
+<span class="material-symbols-outlined text-xs" data-icon="manage_search">manage_search</span>
+<span>Inspect Retrieval (8 chunks used)</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded-lg text-body-sm font-body-sm font-semibold hover:bg-primary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+<span>Push to Meta Ads Manager</span>
+</button>
+</div>
+</div>
+</section>
+<!-- -------------------------------------------------------- -->
+<!-- PANEL 3: EVIDENCE & SOURCE GROUNDING PANEL (30%)          -->
+<!-- -------------------------------------------------------- -->
+<section class="w-[30%] flex flex-col h-full bg-surface-container-low overflow-hidden">
+<!-- Evidence Header -->
+<div class="px-space-md py-space-sm border-b border-outline-variant flex items-center justify-between bg-surface-container-lowest shrink-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="fact_check">fact_check</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Evidence Inspector</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-[#EEF2FF] border border-[#C7D2FE] text-mono-citation font-mono-citation text-[#4338CA] font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="hub">hub</span>
+<span>Strict Hybrid Match</span>
+</div>
+</div>
+<!-- Grounding Evidence Stream -->
+<div class="p-space-md flex-1 overflow-y-auto custom-scroll flex flex-col gap-space-md">
+<!-- Citation 1 Accordion Card (Primary Clinical Proof) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg shadow-xs overflow-hidden">
+<!-- Accordion Title Bar -->
+<div class="p-3 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-5 h-5 rounded-full bg-[#ECFDF5] border border-[#A7F3D0] text-[#059669] text-mono-citation font-mono-citation font-bold flex items-center justify-center shrink-0">
+                2
+              </span>
+<div class="truncate">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface truncate block" title="Kalyani_Clinical_Trials_Bakuchiol_2024_v2.pdf">
+                  Kalyani_Clinical_Trials_Bakuchiol_2024_v2.pdf
+                </span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant block">
+                  Page 14, Section 3.2
+                </span>
+</div>
+</div>
+<span class="text-mono-citation font-mono-citation bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-semibold shrink-0">
+              0.94 Cosine
+            </span>
+</div>
+<!-- Matched Evidence Snippet -->
+<div class="p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-outline">
+<span>LEXICAL RELEVANCE: BM25 18.4</span>
+<span>CHUNK #84</span>
+</div>
+<div class="p-2.5 bg-[#FBFBFA] border border-outline-variant rounded font-mono-code text-body-sm text-on-surface-variant leading-relaxed">
+              “...subjects displayed <mark class="bg-emerald-100 text-emerald-900 font-semibold px-0.5">comparable stimulation of type I collagen synthesis without statistically significant epidermal peeling, erythema, or photo-sensitization</mark> compared to 0.5% retinol cohort over 12 consecutive weeks...”
+            </div>
+<!-- Metadata audit tags -->
+<div class="pt-2 border-t border-surface-container flex flex-wrap items-center gap-1.5 text-mono-citation font-mono-citation">
+<span class="px-1.5 py-0.5 bg-emerald-50 text-emerald-700 rounded border border-emerald-200">Medical Review: Approved</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">Eff. Date: Jan 2024</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">Double-Blind RCT (n=84)</span>
+</div>
+</div>
+</div>
+<!-- Citation 2 Accordion Card (AYUSH Regulatory Validation) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg shadow-xs overflow-hidden">
+<div class="p-3 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-5 h-5 rounded-full bg-[#ECFDF5] border border-[#A7F3D0] text-[#059669] text-mono-citation font-mono-citation font-bold flex items-center justify-center shrink-0">
+                4
+              </span>
+<div class="truncate">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface truncate block" title="AYUSH_Compliance_Skincare_Claims_Q3.pdf">
+                  AYUSH_Compliance_Skincare_Claims_Q3.pdf
+                </span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant block">
+                  Page 4 · Regulatory Schedule E-1
+                </span>
+</div>
+</div>
+<span class="text-mono-citation font-mono-citation bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-semibold shrink-0">
+              0.89 Cosine
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-2">
+<div class="p-2.5 bg-[#FBFBFA] border border-outline-variant rounded font-mono-code text-body-sm text-on-surface-variant leading-relaxed">
+              “...botanical extracts classified under <mark class="bg-emerald-100 text-emerald-900 font-semibold px-0.5">Bakuchi / Psoralea corylifolia are cleared for topical formulation up to 1.5% w/w</mark> for daily cosmetic applications without scheduled medical prescription requirements...”
+            </div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between text-mono-citation font-mono-citation text-on-surface-variant">
+<span>Govt. of India AYUSH Ministry</span>
+<span class="text-emerald-700 font-medium">Valid through 2026</span>
+</div>
+</div>
+</div>
+<!-- Conflict & Guardrail Audit Checklist Card -->
+<div class="p-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg flex flex-col gap-2.5">
+<div class="flex items-center justify-between pb-1.5 border-b border-outline-variant/60">
+<span class="text-label-caps font-label-caps text-on-surface font-semibold">AUTOMATED AUDIT RUNNERS</span>
+<span class="text-mono-citation font-mono-citation text-emerald-700 font-semibold">ALL CLEAR</span>
+</div>
+<!-- Check 1 -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-emerald-600 text-sm" data-icon="check_circle">check_circle</span>
+<span>Prohibited terms check</span>
+</span>
+<span class="text-mono-citation font-mono-citation text-emerald-700 font-medium bg-emerald-50 px-1.5 rounded">Passed (0 violations)</span>
+</div>
+<!-- Check 2 -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-emerald-600 text-sm" data-icon="check_circle">check_circle</span>
+<span>Outdated claims check</span>
+</span>
+<span class="text-mono-citation font-mono-citation text-emerald-700 font-medium bg-emerald-50 px-1.5 rounded">Passed (Active v2.0)</span>
+</div>
+<!-- Check 3 -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-emerald-600 text-sm" data-icon="check_circle">check_circle</span>
+<span>Unsupported claims check</span>
+</span>
+<span class="text-mono-citation font-mono-citation text-emerald-700 font-medium bg-emerald-50 px-1.5 rounded">0 unverified claims</span>
+</div>
+</div>
+<!-- Botanical Batch Fingerprint Card -->
+<div class="p-3 bg-surface-container rounded-lg border border-outline-variant text-mono-citation font-mono-citation flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>INDEX REVISION HASH</span>
+<span class="font-mono-code text-on-surface">#KB-BAK-78403</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>SOURCE EMBEDDING MODEL</span>
+<span class="text-on-surface">text-embedding-3-large (3072d)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>AUDIT LOG RECORDED</span>
+<span class="text-emerald-700">SHA-256 Verified</span>
+</div>
+</div>
+</div>
+<!-- Right Footer: Grounding Sync Status -->
+<div class="px-space-md py-space-sm border-t border-outline-variant bg-surface-container-lowest flex items-center justify-between shrink-0">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">
+          Engine Latency: <span class="font-semibold text-on-surface">240ms</span>
+</span>
+<button class="flex items-center gap-1 text-mono-citation font-mono-citation text-primary hover:underline">
+<span class="material-symbols-outlined text-xs" data-icon="refresh">refresh</span>
+<span>Re-verify citations</span>
+</button>
+</div>
+</section>
+</main>
+</body></html>

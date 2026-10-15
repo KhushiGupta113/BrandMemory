@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrandMemory - Document Conflict Review | Kalyani Botanicals</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#e4e1e6",
+            "surface-variant": "#e4e1e6",
+            "outline": "#777586",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#e0dee9",
+            "surface-container-low": "#f6f2f7",
+            "on-primary-container": "#c1beff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-surface": "#1b1b1e",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf8fc",
+            "on-tertiary-container": "#66daa8",
+            "tertiary-fixed-dim": "#68dba9",
+            "tertiary-container": "#005e40",
+            "on-surface-variant": "#464554",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-tint": "#5148d7",
+            "primary": "#2a14b4",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#e3dfff",
+            "on-primary-fixed": "#100069",
+            "background": "#fbf8fc",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0edf1",
+            "on-error": "#ffffff",
+            "tertiary": "#00442d",
+            "secondary": "#5e5e67",
+            "outline-variant": "#c7c4d7",
+            "surface-container-high": "#eae7eb",
+            "secondary-fixed-dim": "#c7c5d0",
+            "inverse-surface": "#303033",
+            "tertiary-fixed": "#85f8c4",
+            "secondary-fixed": "#e3e1ec",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#62626b",
+            "on-tertiary-fixed": "#002114",
+            "inverse-on-surface": "#f3f0f4",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#372abf",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#46464f",
+            "on-background": "#1b1b1e",
+            "surface-dim": "#dcd9dd",
+            "primary-container": "#4338ca",
+            "on-secondary-fixed": "#1a1b23",
+            "on-tertiary": "#ffffff",
+            "surface": "#fbf8fc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "mono-code": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-citation": ["JetBrains Mono"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-citation": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+    }
+    .conflict-strike {
+      background-color: rgba(254, 226, 226, 0.6);
+      text-decoration: line-through;
+      text-decoration-color: #e11d48;
+      text-decoration-thickness: 2px;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+    .verified-highlight {
+      background-color: rgba(209, 250, 229, 0.7);
+      border-bottom: 2px solid #059669;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased h-full flex overflow-hidden font-body-md text-body-md">
+<!-- ============================================================== -->
+<!-- SideNavBar Component (Exact mapping from Shared Components)    -->
+<!-- ============================================================== -->
+<aside class="h-screen w-64 flex flex-col fixed left-0 top-0 bg-surface-container-low dark:bg-inverse-surface border-r border-outline-variant dark:border-outline z-40 select-none">
+<div class="w-64 h-full flex flex-col justify-between p-space-md z-40">
+<!-- Top Section: Brand Header & Ingest CTA & Navigation -->
+<div class="flex flex-col gap-space-md">
+<!-- Brand Crest & Workspaces -->
+<div class="flex items-center gap-space-sm px-space-sm pt-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined" data-icon="spa" style="font-size: 20px;">spa</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-md font-headline-md font-semibold text-primary dark:text-inverse-primary tracking-tight">BrandMemory</span>
+<span class="text-mono-citation font-mono-citation text-secondary">Kalyani Botanicals</span>
+</div>
+</div>
+<!-- Ingest Document Quick CTA -->
+<button class="w-full mt-space-xs py-space-sm px-space-md bg-surface-container-lowest border border-outline-variant rounded-lg text-primary hover:bg-surface-container transition-colors duration-150 flex items-center justify-center gap-space-sm font-headline-sm text-headline-sm shadow-sm">
+<span class="material-symbols-outlined" data-icon="add" style="font-size: 16px;">add</span>
+<span>+ Ingest Document</span>
+</button>
+<!-- Primary Navigation List -->
+<nav class="flex flex-col gap-1 mt-space-xs">
+<!-- Overview -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Brand Workspace -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Brand Workspace</span>
+</a>
+<!-- Knowledge Library -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Knowledge Library</span>
+</a>
+<!-- Content Studio -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span>Content Studio</span>
+</a>
+<!-- Retrieval Inspector -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="manage_search">manage_search</span>
+<span>Retrieval Inspector</span>
+</a>
+<!-- Evaluation Dashboard -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Evaluation Dashboard</span>
+</a>
+<!-- Conflict Review (ACTIVE PAGE) -->
+<a class="flex items-center justify-between px-space-md py-space-sm bg-secondary-container dark:bg-secondary text-primary dark:text-inverse-primary rounded-lg font-headline-sm text-headline-sm shadow-sm translate-x-0.5" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary" data-icon="rule">rule</span>
+<span>Conflict Review</span>
+</div>
+<!-- Alert counter badge '2' -->
+<span class="px-1.5 py-0.5 text-label-caps font-label-caps rounded bg-error text-on-error font-semibold leading-none">2</span>
+</a>
+</nav>
+</div>
+<!-- Footer: Index Status & Profile Session -->
+<div class="border-t border-outline-variant pt-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between px-space-md py-space-xs rounded-lg text-secondary text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="sync" style="font-size: 16px;">sync</span>
+<span>Index Status (99.4%)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container transition-colors duration-150">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-size: 20px;">account_circle</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface truncate">Dr. Ananya Roy</span>
+<span class="text-mono-citation font-mono-citation text-secondary truncate">Lead Brand Scientist</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- ============================================================== -->
+<!-- TopNavBar & Main Layout Shell                                   -->
+<!-- ============================================================== -->
+<div class="ml-64 flex-1 flex flex-col h-screen overflow-hidden">
+<!-- TopNavBar (Contextual Header) -->
+<header class="h-16 w-full bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex justify-between items-center px-space-lg select-none shadow-sm z-30">
+<!-- Left: Context Breadcrumbs & Real-time Contradiction Counter -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-secondary">
+<span class="font-semibold text-on-surface">Kalyani Botanicals</span>
+<span>/</span>
+<span>Production Model v3.2</span>
+<span>/</span>
+<span class="text-primary font-headline-sm text-headline-sm">Production Index</span>
+</div>
+<span class="h-4 w-px bg-outline-variant"></span>
+<!-- Active Contradictions Counter from Prompt -->
+<div class="flex items-center gap-2 px-2.5 py-1 rounded bg-amber-50 border border-amber-200">
+<span class="material-symbols-outlined text-amber-700" data-icon="warning" style="font-size: 16px;">warning</span>
+<span class="text-mono-code font-mono-code text-amber-900 text-xs font-semibold">
+            Active Contradictions: <span class="text-error font-bold">2 Unresolved</span> • 14 Resolved this month
+          </span>
+</div>
+</div>
+<!-- Right: Search bar & Actions & Quick Utilities -->
+<div class="flex items-center gap-space-md">
+<!-- Quick Search -->
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-secondary" data-icon="search" style="font-size: 16px;">search</span>
+<input class="w-full bg-surface border border-outline-variant rounded-lg pl-8 pr-12 py-1.5 text-body-sm font-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search conflict registry..." type="text"/>
+<span class="absolute right-2 top-2 px-1.5 py-0.5 text-label-caps font-label-caps bg-surface-container text-secondary rounded border border-outline-variant">⌘K</span>
+</div>
+<div class="flex items-center gap-1 border-l border-outline-variant pl-space-md text-secondary">
+<button class="p-2 rounded-lg hover:bg-surface-container transition-colors relative" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container transition-colors" title="Documentation">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container transition-colors" title="Settings / Tuning">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+<!-- Trailing Primary Action -->
+<button class="px-space-md py-1.5 bg-primary hover:bg-primary-container text-on-primary rounded-lg text-body-sm font-body-sm font-medium transition-colors shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined" data-icon="edit_square" style="font-size: 15px;">edit_square</span>
+<span>New Studio Prompt</span>
+</button>
+</div>
+</header>
+<!-- ============================================================== -->
+<!-- Main Workbench Area: 2-Column Responsive Split                  -->
+<!-- ============================================================== -->
+<div class="flex-1 flex overflow-hidden bg-surface">
+<!-- Central Stream: Filter bar & Conflict Review Cards (Fluid central scroll) -->
+<main class="flex-1 overflow-y-auto p-space-lg space-y-space-lg">
+<!-- Header & Filter Bar Section -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm border-b border-outline-variant pb-space-md">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">Document Conflict Review</h1>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">
+                Automated grounding engine identifying claims collisions, obsolete potency specs, and AYUSH regulatory divergence.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-mono-citation font-mono-citation text-secondary">RETRIEVAL ENFORCEMENT:</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 text-mono-citation font-mono-citation font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                STRICT COMPLIANCE GUARD ACTIVE
+              </span>
+</div>
+</div>
+<!-- Status Filter Tabs & Severity Selectors -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-high p-1 rounded-lg border border-outline-variant">
+<button class="px-space-md py-1.5 rounded bg-surface-container-lowest text-primary font-headline-sm text-body-sm shadow-sm flex items-center gap-2">
+<span>Open Conflicts</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error text-on-error text-label-caps font-label-caps">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded text-secondary hover:text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-2">
+<span>Under Human Review</span>
+<span class="px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800 text-label-caps font-label-caps font-semibold">1</span>
+</button>
+<button class="px-space-md py-1.5 rounded text-secondary hover:text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-2">
+<span>Resolved Archive</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-secondary text-label-caps font-label-caps">18</span>
+</button>
+</div>
+<!-- Severity Pills & Filtering Controls -->
+<div class="flex items-center gap-space-sm">
+<span class="text-body-sm font-body-sm text-secondary">Filter by:</span>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition-colors flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                  Critical Regulatory (1)
+                </button>
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Version Mismatch (1)
+                </button>
+<button class="px-2.5 py-1 rounded-full text-mono-citation font-mono-citation bg-surface-container text-secondary border border-outline-variant hover:bg-surface-container-high transition-colors">
+                  Factual Divergence (0)
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- CONFLICT CARD 1: Expanded Detail View (Highlight of screen)     -->
+<!-- ============================================================== -->
+<article class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<!-- Card Header & Metadata Banner -->
+<div class="p-space-lg bg-surface-bright border-b border-outline-variant">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<div class="space-y-1.5">
+<!-- Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-mono-citation font-mono-citation font-semibold bg-rose-100 text-rose-800 border border-rose-300">
+<span class="material-symbols-outlined" data-icon="error" style="font-size: 13px;">error</span>
+                    High Severity • Formulation Percentage Discrepancy
+                  </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-mono-citation font-mono-citation text-secondary bg-surface-container border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="schedule" style="font-size: 13px;">schedule</span>
+                    Detected by Automated Cross-Doc Validation 3h ago
+                  </span>
+</div>
+<!-- Title -->
+<h2 class="text-headline-lg font-headline-lg text-on-surface">
+                  Bakuchiol Active Concentration: 1.0% vs 1.5% in Night Renewal Serum
+                </h2>
+<!-- Impacted Artifacts Alert -->
+<div class="flex items-center gap-2 pt-1 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-amber-600" data-icon="crisis_alert" style="font-size: 16px;">crisis_alert</span>
+<span class="font-medium text-on-surface">Impacted AI Artifacts:</span>
+<span class="px-2 py-0.5 bg-amber-50 text-amber-900 border border-amber-200 rounded text-mono-citation font-mono-citation">
+                    3 Active Prompts • 2 Instagram Drafts Pending Resolution
+                  </span>
+</div>
+</div>
+<!-- Quick ID Badge -->
+<div class="flex flex-col items-end gap-1">
+<span class="text-mono-code font-mono-code text-xs text-secondary bg-surface-container px-2 py-1 rounded border border-outline-variant">
+                  CONFLICT-ID: #KB-2024-089A
+                </span>
+<span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">Target Entity: Night Renewal Serum v3</span>
+</div>
+</div>
+</div>
+<!-- Side-by-Side Comparison Panels (50/50 Forensic Split) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-outline-variant bg-surface">
+<!-- Document A (Left Pane - Superseded / Contradictory) -->
+<div class="p-space-lg flex flex-col justify-between bg-surface-bright">
+<div class="space-y-space-md">
+<!-- Doc A Header / Badging -->
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+<span class="text-label-caps font-label-caps text-rose-700 tracking-wider">DOCUMENT A • OUTDATED SOURCE</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface break-all">
+                      Kalyani_2023_Early_Formulation_PR_Kit.pdf
+                    </h3>
+<p class="text-mono-citation font-mono-citation text-secondary">Page 6, Section 2 (RAG Chunk #4021)</p>
+</div>
+<span class="px-2 py-1 bg-rose-50 border border-rose-200 text-rose-700 text-label-caps font-label-caps rounded font-semibold whitespace-nowrap">
+                    Legacy Spec (Superseded)
+                  </span>
+</div>
+<!-- Document Effective Date & Attributes -->
+<div class="flex items-center gap-space-md text-mono-citation font-mono-citation text-secondary border-y border-outline-variant py-2">
+<div>Effective Date: <span class="text-on-surface font-semibold">May 2023</span></div>
+<div>•</div>
+<div>Status: <span class="text-rose-700 font-semibold">Flagged for Deprecation</span></div>
+</div>
+<!-- Passage Excerpt with strike-through styling -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg border border-outline-variant shadow-sm relative">
+<div class="text-label-caps font-label-caps text-secondary mb-2 flex items-center justify-between">
+<span>EXTRACTED PASSAGE:</span>
+<span class="text-rose-600 font-mono-citation">Confidence Match: 94.2%</span>
+</div>
+<blockquote class="text-body-md font-body-md text-on-surface leading-relaxed pl-3 border-l-2 border-rose-400 italic">
+                    "...Our proprietary formulation incorporates <span class="conflict-strike font-semibold text-rose-900">1.5% concentrated botanical Bakuchiol extract</span> to ensure accelerated dermal renewal across mature Indian skin types..."
+                  </blockquote>
+</div>
+<!-- Forensic Provenance Metadata -->
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant text-mono-citation font-mono-citation space-y-1">
+<div class="flex justify-between">
+<span class="text-secondary">Uploaded By:</span>
+<span class="text-on-surface">Marketing Team (Bulk Ingest)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Doc Version:</span>
+<span class="text-on-surface">v1.1 Early Release</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Regulatory Stamp:</span>
+<span class="text-rose-600 font-semibold">Not AYUSH Verified</span>
+</div>
+</div>
+</div>
+<!-- Doc A Bottom Warning -->
+<div class="mt-space-md pt-space-sm border-t border-dashed border-outline-variant flex items-center gap-2 text-rose-700 text-body-sm">
+<span class="material-symbols-outlined" data-icon="block" style="font-size: 16px;">block</span>
+<span class="text-mono-citation font-mono-citation">High risk of hallucination: 2 prompts currently reference chunk #4021.</span>
+</div>
+</div>
+<!-- Document B (Right Pane - Verified Ground Truth Spec) -->
+<div class="p-space-lg flex flex-col justify-between bg-surface-container-lowest">
+<div class="space-y-space-md">
+<!-- Doc B Header / Badging -->
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-label-caps font-label-caps text-emerald-800 tracking-wider">DOCUMENT B • VERIFIED GROUND TRUTH</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface break-all">
+                      Kalyani_Clinical_Trials_Bakuchiol_2024_v2.pdf
+                    </h3>
+<p class="text-mono-citation font-mono-citation text-secondary">Page 14, Section 3.1 (RAG Chunk #8112)</p>
+</div>
+<span class="px-2 py-1 bg-emerald-50 border border-emerald-300 text-emerald-800 text-label-caps font-label-caps rounded font-semibold whitespace-nowrap">
+                    Approved Active Formulation
+                  </span>
+</div>
+<!-- Document Effective Date & Attributes -->
+<div class="flex items-center gap-space-md text-mono-citation font-mono-citation text-secondary border-y border-outline-variant py-2">
+<div>Effective Date: <span class="text-on-surface font-semibold">January 2024</span></div>
+<div>•</div>
+<div>Protocol: <span class="text-emerald-700 font-semibold">Phase-2 Tolerance Validated</span></div>
+</div>
+<!-- Passage Excerpt with green verified highlighting -->
+<div class="bg-surface-bright p-space-md rounded-lg border border-emerald-200 shadow-sm relative">
+<div class="text-label-caps font-label-caps text-secondary mb-2 flex items-center justify-between">
+<span>EXTRACTED PASSAGE:</span>
+<span class="text-emerald-700 font-mono-citation">Scientist Signed: AYUSH-IND-881</span>
+</div>
+<blockquote class="text-body-md font-body-md text-on-surface leading-relaxed pl-3 border-l-2 border-emerald-600 italic">
+                    "...Following phase-2 tolerance optimization, final commercial batch concentration was fixed at <span class="verified-highlight font-semibold text-emerald-950">1.0% w/w Bakuchiol combined with 2.0% Gotu Kola</span> to eliminate mild tingling in hypersensitive subjects while retaining 98% efficacy..."
+                  </blockquote>
+</div>
+<!-- Forensic Provenance Metadata -->
+<div class="bg-emerald-50/50 p-space-sm rounded border border-emerald-200 text-mono-citation font-mono-citation space-y-1">
+<div class="flex justify-between">
+<span class="text-secondary">Uploaded By:</span>
+<span class="text-on-surface font-medium">Dr. Ananya Roy (Lead Brand Scientist)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Signed Off By:</span>
+<span class="text-emerald-800 font-medium">Formulatory Board &amp; AYUSH Liaison</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Vector Hash:</span>
+<span class="text-on-surface">sha256:7f49c...91b8</span>
+</div>
+</div>
+</div>
+<!-- Doc B Positive Indicator -->
+<div class="mt-space-md pt-space-sm border-t border-dashed border-outline-variant flex items-center gap-2 text-emerald-800 text-body-sm">
+<span class="material-symbols-outlined text-emerald-600" data-icon="verified" style="font-size: 16px;">verified</span>
+<span class="text-mono-citation font-mono-citation">Golden Truth Reference: Master packaging labels match this exact spec.</span>
+</div>
+</div>
+</div>
+<!-- Resolution Workflow & Human Review Action Panel -->
+<div class="p-space-lg bg-surface-container-low border-t border-outline-variant space-y-space-md">
+<!-- Conflict Diagnosis Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg border border-outline-variant flex items-start gap-space-md">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined" data-icon="psychology" style="font-size: 20px;">psychology</span>
+</div>
+<div class="space-y-1">
+<h4 class="text-headline-sm font-headline-sm text-on-surface">Automated Grounding Diagnosis</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                  Automated grounding detected that older PR Kit (v1.1) specifies 1.5% while commercial trial specs and packaging labels mandate 1.0%. Generative models risk citing the obsolete 1.5% concentration, leading to compliance violations.
+                </p>
+</div>
+</div>
+<!-- Auditor Notes Input Field -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="text-label-caps font-label-caps text-secondary">
+                  SCIENTIST AUDIT RESOLUTION NOTE (PERSISTED IN KNOWLEDGE LEDGER):
+                </label>
+<span class="text-mono-citation font-mono-citation text-secondary">Logged as Dr. Ananya Roy</span>
+</div>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-space-sm text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" rows="2">Reconciled: All consumer marketing must reflect strictly 1.0% concentration as per 2024 clinical batch approvals.</textarea>
+</div>
+<!-- Interactive Human Review Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm w-full sm:w-auto">
+<!-- Action 1: Deprecate Doc A for RAG (Primary Indigo Button) -->
+<button class="px-space-md py-2 bg-primary-container hover:bg-primary text-on-primary rounded text-body-md font-body-md font-semibold transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="delete_sweep" style="font-size: 18px;">delete_sweep</span>
+<span>Mark Document A as Deprecated for RAG</span>
+</button>
+<!-- Action 2: Override Claim & Update Dependent Prompts -->
+<button class="px-space-md py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-on-surface rounded text-body-md font-body-md font-semibold transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="sync_saved_locally" style="font-size: 18px;">sync_saved_locally</span>
+<span>Override Claim to 1.0% and Update All Dependent Prompts</span>
+</button>
+</div>
+<!-- Action 3: Request Board Clarification -->
+<button class="px-space-md py-2 text-secondary hover:text-on-surface text-body-sm font-body-sm hover:underline transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined" data-icon="forward_to_inbox" style="font-size: 16px;">forward_to_inbox</span>
+<span>Request Formulatory Board Clarification</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ============================================================== -->
+<!-- CONFLICT CARD 2: Collapsed / Compact Card                      -->
+<!-- ============================================================== -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm hover:border-outline transition-colors">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-1.5 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation font-semibold bg-rose-100 text-rose-800 border border-rose-300">
+                  Critical Regulatory • AYUSH Compliance Conflict
+                </span>
+<span class="text-mono-code font-mono-code text-xs text-secondary">
+                  CONFLICT-ID: #KB-2024-092R
+                </span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface">
+                AYUSH Claim Wording: "Cures pigmentation" vs "Clinically attenuates dark spots"
+              </h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                2022 Influencer Guideline claims "removes melasma completely" which violates 2024 Drugs and Magic Remedies Act. Active standard mandates "visibly reduces hyperpigmentation by 28%".
+              </p>
+</div>
+<!-- Quick Action Cluster -->
+<div class="flex items-center gap-space-sm shrink-0 border-t md:border-t-0 pt-space-sm md:pt-0 border-outline-variant">
+<button class="px-space-md py-1.5 bg-rose-50 border border-rose-200 text-rose-800 hover:bg-rose-100 rounded text-body-sm font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-rose-700" data-icon="archive" style="font-size: 16px;">archive</span>
+<span>Deprecate Legacy Guideline</span>
+</button>
+<button class="px-space-md py-1.5 bg-surface-container-lowest border border-outline-variant text-on-surface hover:bg-surface-container rounded text-body-sm font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary" data-icon="gavel" style="font-size: 16px;">gavel</span>
+<span>Assign to Legal</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary" title="Expand View">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</article>
+</main>
+<!-- ============================================================== -->
+<!-- Right Sidebar: Audit History & Provenance Stream (440px max)   -->
+<!-- ============================================================== -->
+<aside class="w-80 lg:w-96 border-l border-outline-variant bg-surface-container-lowest flex flex-col justify-between shrink-0 hidden md:flex">
+<!-- Header of Activity Ledger -->
+<div class="p-space-md border-b border-outline-variant bg-surface-bright flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu" style="font-size: 20px;">history_edu</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Audit History &amp; Provenance</h3>
+</div>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-secondary">Live Ledger</span>
+</div>
+<!-- Activity Stream Items -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md divide-y divide-outline-variant">
+<!-- Recent Item 1 (From prompt: Dr. Ananya Roy action) -->
+<div class="pt-space-sm first:pt-0 space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-800 text-label-caps font-label-caps rounded font-semibold">
+                RESOLVED • REPLACED
+              </span>
+<span class="text-mono-citation font-mono-citation text-secondary">Yesterday • 16:42</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface">
+<strong class="font-semibold text-primary">Dr. Ananya Roy</strong> deprecated Kumkumadi Saffron grade v1.0 in favor of Kashmir Grade-A A++ spec v2.2.
+            </p>
+<div class="text-mono-citation font-mono-citation text-secondary bg-surface-container-low p-2 rounded border border-outline-variant">
+              Hash: #KB-CHG-9921 • Excluded 4 deprecated chunks across 11 marketing agents.
+            </div>
+</div>
+<!-- Recent Item 2 -->
+<div class="pt-space-md space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 bg-secondary-container text-secondary text-label-caps font-label-caps rounded font-semibold">
+                POLICY UPDATE
+              </span>
+<span class="text-mono-citation font-mono-citation text-secondary">3 Days Ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface">
+<strong class="font-semibold">Legal Council</strong> approved updated Disclaimers for Gotu Kola Collagen Regeneration series.
+            </p>
+<div class="text-mono-citation font-mono-citation text-secondary bg-surface-container-low p-2 rounded border border-outline-variant">
+              Mandatory disclaimer [KB-REG-09] injected into all upcoming campaign prompts.
+            </div>
+</div>
+<!-- Recent Item 3 -->
+<div class="pt-space-md space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-800 text-label-caps font-label-caps rounded font-semibold">
+                RESOLVED • OVERRIDDEN
+              </span>
+<span class="text-mono-citation font-mono-citation text-secondary">May 12, 2024</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface">
+<strong class="font-semibold">Sanjay Verma</strong> verified Ashwagandha root water-extraction purity benchmark (5.2% Withanolides).
+            </p>
+<div class="text-mono-citation font-mono-citation text-secondary bg-surface-container-low p-2 rounded border border-outline-variant">
+              Overwrote 2021 ethanol extraction monograph.
+            </div>
+</div>
+<!-- Regulatory Guard Status Metric -->
+<div class="pt-space-md space-y-2">
+<div class="p-space-md rounded-lg bg-surface-container border border-outline-variant space-y-2">
+<span class="text-label-caps font-label-caps text-secondary block">AYUSH REGULATORY SHIELD STATUS</span>
+<div class="flex items-center justify-between">
+<span class="text-headline-sm font-headline-sm text-primary">99.8% Grounded</span>
+<span class="text-mono-citation font-mono-citation text-emerald-700 font-semibold">0 False Claims Live</span>
+</div>
+<div class="w-full bg-outline-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[99.8%]"></div>
+</div>
+<p class="text-mono-citation font-mono-citation text-secondary">
+                127 vectors actively synchronized across 8 marketing channels.
+              </p>
+</div>
+</div>
+</div>
+<!-- Sidebar Footer Action -->
+<div class="p-space-md border-t border-outline-variant bg-surface-bright">
+<button class="w-full py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-on-surface rounded text-body-sm font-body-sm font-medium transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-secondary" data-icon="download" style="font-size: 16px;">download</span>
+<span>Export Compliance Audit PDF</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+</body></html>

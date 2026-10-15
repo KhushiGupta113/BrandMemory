@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brand Workspace — BrandMemory | Kalyani Botanicals</title>
+<!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#e4e1e6",
+            "surface-variant": "#e4e1e6",
+            "outline": "#777586",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#e0dee9",
+            "surface-container-low": "#f6f2f7",
+            "on-primary-container": "#c1beff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-surface": "#1b1b1e",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf8fc",
+            "on-tertiary-container": "#66daa8",
+            "tertiary-fixed-dim": "#68dba9",
+            "tertiary-container": "#005e40",
+            "on-surface-variant": "#464554",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-tint": "#5148d7",
+            "primary": "#2a14b4",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#e3dfff",
+            "on-primary-fixed": "#100069",
+            "background": "#fbf8fc",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0edf1",
+            "on-error": "#ffffff",
+            "tertiary": "#00442d",
+            "secondary": "#5e5e67",
+            "outline-variant": "#c7c4d7",
+            "surface-container-high": "#eae7eb",
+            "secondary-fixed-dim": "#c7c5d0",
+            "inverse-surface": "#303033",
+            "tertiary-fixed": "#85f8c4",
+            "secondary-fixed": "#e3e1ec",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#62626b",
+            "on-tertiary-fixed": "#002114",
+            "inverse-on-surface": "#f3f0f4",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#372abf",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#46464f",
+            "on-background": "#1b1b1e",
+            "surface-dim": "#dcd9dd",
+            "primary-container": "#4338ca",
+            "on-secondary-fixed": "#1a1b23",
+            "on-tertiary": "#ffffff",
+            "surface": "#fbf8fc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "mono-code": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-citation": ["JetBrains Mono"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-citation": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 19px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f6f2f7;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c7c4d7;
+      border-radius: 3px;
+    }
+    .citation-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      border-bottom: 1.5px solid #4338ca;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased h-full flex flex-col overflow-hidden font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: SideNavBar (Fixed Left, 64 = 16rem = 256px)             -->
+<!-- ========================================================================= -->
+<aside class="h-screen w-64 flex flex-col fixed left-0 top-0 bg-surface-container-low dark:bg-inverse-surface border-r border-outline-variant dark:border-outline z-40">
+<div class="w-64 h-full flex flex-col justify-between p-space-md">
+<!-- Top Branding & Navigation Items -->
+<div class="flex flex-col gap-y-space-md">
+<!-- Brand Crest / Header -->
+<div class="flex items-center gap-x-3 px-space-sm pt-space-xs pb-space-sm border-b border-outline-variant/60">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-md font-headline-md font-semibold text-primary dark:text-inverse-primary tracking-tight">BrandMemory</span>
+<span class="text-mono-citation font-mono-citation text-secondary">Kalyani Botanicals</span>
+</div>
+</div>
+<!-- Ingest CTA Button -->
+<button class="w-full flex items-center justify-center gap-2 py-2 px-3 bg-surface-container-lowest border border-outline-variant hover:border-primary text-primary font-headline-sm text-headline-sm rounded-lg hover:bg-surface-container-high transition-colors duration-150 shadow-sm" type="button">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>+ Ingest Document</span>
+</button>
+<!-- Navigation Tabs: Exact Match 'Brand Workspace' Active -->
+<nav class="flex flex-col gap-1 mt-1">
+<!-- Overview -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Brand Workspace (ACTIVE TAB - Exactly matched and styled) -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm bg-secondary-container dark:bg-secondary text-primary dark:text-inverse-primary rounded-lg font-headline-sm text-headline-sm translate-x-0.5 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Brand Workspace</span>
+</a>
+<!-- Knowledge Library -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Knowledge Library</span>
+</a>
+<!-- Content Studio -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span>Content Studio</span>
+</a>
+<!-- Retrieval Inspector -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="manage_search">manage_search</span>
+<span>Retrieval Inspector</span>
+</a>
+<!-- Evaluation Dashboard -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Evaluation Dashboard</span>
+</a>
+<!-- Conflict Review -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant dark:text-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="rule">rule</span>
+<span>Conflict Review</span>
+</a>
+</nav>
+</div>
+<!-- Footer Metadata & Profile -->
+<div class="flex flex-col gap-2 pt-space-md border-t border-outline-variant/60">
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container-highest/60 text-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="sync">sync</span>
+<span class="text-mono-citation font-mono-citation">Index Status (99.4%)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+</div>
+<div class="flex items-center gap-2.5 px-space-sm py-2 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="account_circle">account_circle</span>
+<div class="flex flex-col leading-tight">
+<span class="text-headline-sm font-headline-sm text-on-surface">Dr. Ananya Roy</span>
+<span class="text-mono-citation font-mono-citation text-secondary">Lead Brand Scientist</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: TopNavBar (Contextual Header, Docked Full Width)        -->
+<!-- ========================================================================= -->
+<header class="docked full-width top-0 h-16 bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none fixed right-0 left-0 z-30">
+<div class="flex justify-between items-center w-full px-space-lg h-16 ml-64 max-w-[calc(100%-16rem)]">
+<!-- Left side: Context Brand Badge & Global Quick Search -->
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface tracking-tight">Kalyani Botanicals</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed text-primary border border-primary/20">
+            Strict Enterprise
+          </span>
+</div>
+<div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-surface-container-low border border-outline-variant text-on-surface-variant w-72">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-0 p-0 text-body-sm font-body-sm text-on-surface focus:ring-0 w-full placeholder:text-outline" placeholder="Search guidelines, rules, monographs..." type="text"/>
+<kbd class="text-label-caps font-label-caps px-1 py-0.5 rounded bg-surface-container-highest border border-outline-variant text-secondary">⌘K</kbd>
+</div>
+</div>
+<!-- Center Links / Breadcrumb Context -->
+<div class="hidden xl:flex items-center gap-6">
+<span class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md pb-1 cursor-pointer hover:text-on-surface">Production Model v3.2</span>
+<span class="text-primary dark:text-inverse-primary font-headline-sm text-headline-sm border-b-2 border-primary dark:border-inverse-primary pb-1">Brand Governance Matrix</span>
+<span class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md pb-1 cursor-pointer hover:text-on-surface">Production Index</span>
+</div>
+<!-- Right Trailing Actions -->
+<div class="flex items-center gap-space-md">
+<!-- Icon actions from JSON -->
+<div class="flex items-center gap-1 border-r border-outline-variant pr-space-md">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Guideline Help">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Workspace Config">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+<!-- Export Action -->
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-on-surface rounded font-headline-sm text-headline-sm flex items-center gap-1.5 text-body-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span>Export Matrix</span>
+</button>
+<!-- Trailing Primary Action -->
+<button class="px-3.5 py-1.5 bg-primary-container text-on-primary hover:bg-primary rounded font-headline-sm text-headline-sm flex items-center gap-1.5 text-body-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span>+ Add New Guideline</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- MAIN WORKBENCH CANVAS                                                      -->
+<!-- ========================================================================= -->
+<main class="ml-64 mt-16 flex-1 overflow-y-auto custom-scrollbar p-space-lg bg-surface">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-y-space-lg">
+<!-- ===================================================================== -->
+<!-- TOP BANNER & GOVERNANCE IDENTITY CARD                                -->
+<!-- ===================================================================== -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-space-lg shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="text-display-lg font-display-lg tracking-tight text-on-surface">Kalyani Botanicals</span>
+<span class="px-2.5 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary-fixed text-tertiary-container font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              Verified Active Ground Truth
+            </span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant border border-outline-variant">
+              142 Documents Synced
+            </span>
+</div>
+<p class="text-body-lg font-body-lg text-secondary">
+            Dermatological Ayurveda &amp; High-Efficacy Clinical Botanicals. Authoritative context anchor for generative creative, Nykaa campaign copy, and UK/UAE compliance.
+          </p>
+</div>
+<!-- Metadata Pills Box -->
+<div class="flex flex-wrap items-center gap-3 bg-surface-container-low px-space-md py-space-sm rounded-lg border border-outline-variant/70 self-start lg:self-center">
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps text-outline uppercase">Active Markets</span>
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">India (D2C + Nykaa Luxe), UAE, UK</span>
+</div>
+<div class="h-7 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps text-outline uppercase">Compliance Regime</span>
+<span class="text-body-sm font-body-sm font-semibold text-tertiary">AYUSH GMP &amp; DMRA Compliant</span>
+</div>
+<div class="h-7 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps text-outline uppercase">Security Protocol</span>
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Zero-Egress Isolation</span>
+</div>
+</div>
+</div>
+<!-- ===================================================================== -->
+<!-- 2-COLUMN GOVERNANCE WORKSPACE (58% / 42%)                             -->
+<!-- ===================================================================== -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- =================================================================== -->
+<!-- LEFT COLUMN (7 Cols ~ 58%)                                          -->
+<!-- =================================================================== -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- CARD 1: Tone of Voice Matrix & Linguistic Pillars -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="tune">tune</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Tone of Voice Matrix &amp; Linguistic Pillars</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline px-2 py-0.5 rounded bg-surface-container">CALIBRATION WEIGHTS</span>
+</div>
+<div class="flex flex-col gap-space-md mt-space-md">
+<!-- Pillar 1: Clinical Authority (75%) -->
+<div class="p-space-md rounded-lg bg-surface-bright border border-outline-variant/80 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Clinical Authority</span>
+<span class="text-mono-citation font-mono-citation px-1.5 py-0.5 rounded bg-primary-fixed/60 text-primary font-medium">PRIMARY HARMONIC</span>
+</div>
+<span class="text-mono-code font-mono-code font-semibold text-primary">75% Weight</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 75%"></div>
+</div>
+<p class="text-body-sm font-body-sm text-secondary">
+                  Evidence-backed, dermatologically rigorous phrasing. Explicitly cite multi-centric in-vivo trials, instrumental corneometer readings, and exact percentage improvements with participant sample sizes <span class="citation-tag text-primary cursor-pointer">[KB-CLIN-09]</span>.
+                </p>
+<div class="flex items-center gap-2 pt-1 text-mono-citation font-mono-citation text-outline">
+<span>Mandatory anchor: "Double-blind clinical study (n=48)"</span>
+<span>•</span>
+<span>Tone: Rigorous, measured, unassailable</span>
+</div>
+</div>
+<!-- Pillar 2: Warm Ayurvedic Poetry (60%) -->
+<div class="p-space-md rounded-lg bg-surface-bright border border-outline-variant/80 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Warm Ayurvedic Poetry</span>
+<span class="text-mono-citation font-mono-citation px-1.5 py-0.5 rounded bg-tertiary-fixed/60 text-tertiary-container font-medium">CULTURAL HERITAGE</span>
+</div>
+<span class="text-mono-code font-mono-code font-semibold text-tertiary">60% Weight</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary-container h-1.5 rounded-full" style="width: 60%"></div>
+</div>
+<p class="text-body-sm font-body-sm text-secondary">
+                  Respectful reverence for classical Charaka &amp; Sushruta botanical formulations (Kumkumadi Thailam, Gotu Kola, Kashmiri Saffron). Strictly avoid esoteric, mystical, or pseudo-religious exaggeration; emphasize traditional copper extraction and cold-press alchemy.
+                </p>
+<div class="flex items-center gap-2 pt-1 text-mono-citation font-mono-citation text-outline">
+<span>Classical reference: Ashtanga Hridaya (Ch. 13)</span>
+<span>•</span>
+<span>Tone: Reverent, sensorial, grounded</span>
+</div>
+</div>
+<!-- Pillar 3: Understated Luxury (50%) -->
+<div class="p-space-md rounded-lg bg-surface-bright border border-outline-variant/80 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Understated Luxury</span>
+<span class="text-mono-citation font-mono-citation px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-medium">RESTRAINT DISCIPLINE</span>
+</div>
+<span class="text-mono-code font-mono-code font-semibold text-secondary">50% Weight</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 50%"></div>
+</div>
+<p class="text-body-sm font-body-sm text-secondary">
+                  Elevated, clean, quiet confidence. Strictly prohibit promotional urgency ("Hurry!", "Limited Stock", "Steal Deals"), sensationalist buzzwords, or ALL-CAPS headlines. Focus on tactile rituals and botanical purity.
+                </p>
+<div class="flex items-center gap-2 pt-1 text-mono-citation font-mono-citation text-outline">
+<span>Disallowed: Discount urgency, hyperbolic exclamation marks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Audience Segments & Persona Targeting -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="group">group</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Audience Segments &amp; Persona Targeting</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline px-2 py-0.5 rounded bg-surface-container">2 ACTIVE TARGET COHORTS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+<!-- Segment A -->
+<div class="p-space-md rounded-lg border border-outline-variant bg-surface-bright flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed/50 text-primary font-semibold">SEGMENT A</span>
+<span class="text-mono-citation font-mono-citation text-outline">TAM: 1.4M</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Urban Conscious Consumers (26–42)</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                    Educated metropolitans (Mumbai, Bengaluru, Delhi NCR, London) seeking clean retinoid alternatives due to high humidity skin flare-ups. Demands peer-reviewed clinical proof over brand hype.
+                  </p>
+</div>
+<div class="pt-2 border-t border-outline-variant/50 flex flex-col gap-1 text-mono-citation font-mono-citation">
+<div class="text-on-surface flex items-center justify-between">
+<span class="text-outline">Key Concern:</span>
+<span>Barrier Integrity, Photo-aging</span>
+</div>
+<div class="text-on-surface flex items-center justify-between">
+<span class="text-outline">Preferred Actives:</span>
+<span>1.0% Bakuchiol, Gotu Kola</span>
+</div>
+</div>
+</div>
+<!-- Segment B -->
+<div class="p-space-md rounded-lg border border-outline-variant bg-surface-bright flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary-fixed/50 text-tertiary font-semibold">SEGMENT B</span>
+<span class="text-mono-citation font-mono-citation text-outline">TAM: 820K</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Festive Gifting &amp; Ayurvedic Purists</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                    Luxe buyers and connoisseurs emphasizing ingredient provenance, artisanal saffron harvesting (Pampore, Kashmir), cruelty-free cold extraction, and heritage ritual packaging.
+                  </p>
+</div>
+<div class="pt-2 border-t border-outline-variant/50 flex flex-col gap-1 text-mono-citation font-mono-citation">
+<div class="text-on-surface flex items-center justify-between">
+<span class="text-outline">Key Concern:</span>
+<span>Authenticity, Ethical Sourcing</span>
+</div>
+<div class="text-on-surface flex items-center justify-between">
+<span class="text-outline">Preferred Actives:</span>
+<span>Kumkumadi Thailam, Saffron</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: Key Product Pillars & Active Ingredient Monographs -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="science">science</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Key Product Pillars &amp; Active Ingredient Monographs</h2>
+</div>
+<button class="text-body-sm font-body-sm text-primary hover:underline flex items-center gap-1 font-medium">
+<span>View Full Formulations</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Monograph Data Table -->
+<div class="overflow-x-auto mt-space-md">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/80 text-label-caps font-label-caps text-outline bg-surface-container-low/50">
+<th class="py-2.5 px-3">Formulation Name</th>
+<th class="py-2.5 px-3">Primary Botanical</th>
+<th class="py-2.5 px-3">Spec Version</th>
+<th class="py-2.5 px-3">Approved Date</th>
+<th class="py-2.5 px-3 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/40 text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">
+                      Bakuchiol 1.0% Night Renewal
+                    </td>
+<td class="py-2.5 px-3 text-secondary font-mono-code text-xs">Psoralea corylifolia (100% Phyto-Retinol)</td>
+<td class="py-2.5 px-3 font-mono-code text-xs">v4.1.2</td>
+<td class="py-2.5 px-3 text-secondary">Sep 28, 2024</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        AYUSH Approved
+                      </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">
+                      Kumkumadi 26-Herb Radiance Elixir
+                    </td>
+<td class="py-2.5 px-3 text-secondary font-mono-code text-xs">Crocus sativus + 25 Classical Herbs</td>
+<td class="py-2.5 px-3 font-mono-code text-xs">v3.8.0</td>
+<td class="py-2.5 px-3 text-secondary">Oct 02, 2024</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        AYUSH Approved
+                      </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">
+                      Gotu Kola Barrier Cream
+                    </td>
+<td class="py-2.5 px-3 text-secondary font-mono-code text-xs">Centella asiatica (Madecassoside 95%)</td>
+<td class="py-2.5 px-3 font-mono-code text-xs">v2.4.1</td>
+<td class="py-2.5 px-3 text-secondary">Aug 14, 2024</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        AYUSH Approved
+                      </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">
+                      Ashwagandha Stress Recovery Mist
+                    </td>
+<td class="py-2.5 px-3 text-secondary font-mono-code text-xs">Withania somnifera + Rose Hydrosol</td>
+<td class="py-2.5 px-3 font-mono-code text-xs">v1.9.0</td>
+<td class="py-2.5 px-3 text-secondary">Oct 11, 2024</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-amber-50 text-amber-700 border border-amber-200">
+                        Batch Variance Pending
+                      </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- RIGHT COLUMN (5 Cols ~ 42%)                                         -->
+<!-- =================================================================== -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- CARD 1: Prohibited Phrases & Automated Interceptor Guardrails -->
+<div class="bg-surface-container-lowest rounded-xl border border-rose-200 p-space-lg shadow-sm relative overflow-hidden">
+<!-- Subtle accent top strip -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 to-amber-500"></div>
+<div class="flex items-center justify-between pb-space-md border-b border-rose-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-600" data-icon="gpp_bad">gpp_bad</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Prohibited Phrases &amp; Interceptor</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-rose-50 text-rose-700 border border-rose-200 font-semibold">
+                DMRA STRICT
+              </span>
+</div>
+<!-- Interceptor Efficiency Metric Banner -->
+<div class="mt-space-md p-space-sm rounded-lg bg-rose-50/70 border border-rose-200/60 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-600" data-icon="shield">shield</span>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-rose-900 leading-tight">Interception Rate: 100%</span>
+<span class="text-mono-citation font-mono-citation text-rose-700">42 hallucinated drafts blocked in last 30 days</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-rose-600 animate-ping"></span>
+</div>
+<!-- Guardrails List -->
+<div class="flex flex-col gap-space-md mt-space-md">
+<!-- Rule 1 -->
+<div class="p-3 rounded-lg bg-surface-bright border border-rose-100 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-rose-700 font-mono-code text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span>
+<span class="line-through font-semibold">"Anti-aging miracle"</span>
+</div>
+<div class="flex items-start gap-1.5 text-tertiary font-body-sm bg-tertiary-fixed/20 p-2 rounded border border-tertiary-fixed">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-xs leading-relaxed">
+                    Mandated: "Visibly reduces fine lines and supports skin elasticity"
+                  </span>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline text-[10px]">Rule: DMRA Section 3 (Prohibition of misleading rejuvenation claims)</span>
+</div>
+<!-- Rule 2 -->
+<div class="p-3 rounded-lg bg-surface-bright border border-rose-100 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-rose-700 font-mono-code text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span>
+<span class="line-through font-semibold">"100% cure for melasma / acne"</span>
+</div>
+<div class="flex items-start gap-1.5 text-tertiary font-body-sm bg-tertiary-fixed/20 p-2 rounded border border-tertiary-fixed">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-xs leading-relaxed">
+                    Mandated: "Clinically observed 28% attenuation of hyperpigmentation"
+                  </span>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline text-[10px]">Rule: Cosmetic Act 1940: Prohibits therapeutic cure guarantees</span>
+</div>
+<!-- Rule 3 -->
+<div class="p-3 rounded-lg bg-surface-bright border border-rose-100 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-rose-700 font-mono-code text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span>
+<span class="line-through font-semibold">"Chemical-free / All natural"</span>
+</div>
+<div class="flex items-start gap-1.5 text-tertiary font-body-sm bg-tertiary-fixed/20 p-2 rounded border border-tertiary-fixed">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-xs leading-relaxed">
+                    Mandated: "Botanically concentrated, formulated without synthetic fragrance or sulfates"
+                  </span>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline text-[10px]">Rule: Scientific Accuracy: Water is a chemical; specify formulation exclusions</span>
+</div>
+<!-- Rule 4 -->
+<div class="p-3 rounded-lg bg-surface-bright border border-rose-100 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-rose-700 font-mono-code text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span>
+<span class="line-through font-semibold">"Instant overnight transformation"</span>
+</div>
+<div class="flex items-start gap-1.5 text-tertiary font-body-sm bg-tertiary-fixed/20 p-2 rounded border border-tertiary-fixed">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-xs leading-relaxed">
+                    Mandated: "Cumulative barrier nourishment over 4 to 8 weeks"
+                  </span>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline text-[10px]">Rule: Clinical Trial KB-CT-2023-B requirement for timeline veracity</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Approved Terminology & Scientific Nomenclature Dictionary -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="spellcheck">spellcheck</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">Scientific Nomenclature</h2>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline">AYUSH CERTIFIED</span>
+</div>
+<!-- Nomenclature Dictionary List -->
+<div class="flex flex-col divide-y divide-outline-variant/40 mt-space-md">
+<!-- Item 1 -->
+<div class="py-2.5 flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Bakuchi (Phyto-Retinol)</span>
+<span class="text-mono-code font-mono-code text-xs text-primary italic">Psoralea corylifolia</span>
+</div>
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-secondary">
+<span>Pronunciation: /buh-KOO-chee/</span>
+<span class="citation-tag text-primary cursor-pointer">[AYUSH-MONO-114]</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="py-2.5 flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Gotu Kola (Indian Pennywort)</span>
+<span class="text-mono-code font-mono-code text-xs text-primary italic">Centella asiatica</span>
+</div>
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-secondary">
+<span>Pronunciation: /ˈɡoʊ.tuː ˈkoʊ.lə/</span>
+<span class="citation-tag text-primary cursor-pointer">[AYUSH-MONO-082]</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="py-2.5 flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Kashmiri Saffron (Kumkuma)</span>
+<span class="text-mono-code font-mono-code text-xs text-primary italic">Crocus sativus</span>
+</div>
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-secondary">
+<span>Pronunciation: /KROH-kuhs suh-TYE-vuhs/</span>
+<span class="citation-tag text-primary cursor-pointer">[GI-TAG-J&amp;K-2020]</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="py-2.5 flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Winter Cherry (Indian Ginseng)</span>
+<span class="text-mono-code font-mono-code text-xs text-primary italic">Withania somnifera</span>
+</div>
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-secondary">
+<span>Pronunciation: /wih-THAY-nee-uh/</span>
+<span class="citation-tag text-primary cursor-pointer">[AYUSH-MONO-219]</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: Governance & Audit Trail -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Governance &amp; Audit Trail</span>
+<span class="text-mono-citation font-mono-citation text-secondary">
+                  Last updated by <strong class="text-on-surface">Dr. Ananya Roy</strong> on Oct 14, 2024
+                </span>
+<span class="text-mono-citation font-mono-citation text-tertiary font-medium">
+                  Next quarterly regulatory review due in 45 days.
+                </span>
+</div>
+</div>
+<button class="px-3 py-1 bg-surface-container text-on-surface text-body-sm rounded hover:bg-surface-container-high transition-colors font-medium">
+              View Log
+            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evaluation Dashboard — BrandMemory | Kalyani Botanicals</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#e4e1e6",
+            "surface-variant": "#e4e1e6",
+            "outline": "#777586",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#e0dee9",
+            "surface-container-low": "#f6f2f7",
+            "on-primary-container": "#c1beff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-surface": "#1b1b1e",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf8fc",
+            "on-tertiary-container": "#66daa8",
+            "tertiary-fixed-dim": "#68dba9",
+            "tertiary-container": "#005e40",
+            "on-surface-variant": "#464554",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-tint": "#5148d7",
+            "primary": "#2a14b4",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#e3dfff",
+            "on-primary-fixed": "#100069",
+            "background": "#fbf8fc",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0edf1",
+            "on-error": "#ffffff",
+            "tertiary": "#00442d",
+            "secondary": "#5e5e67",
+            "outline-variant": "#c7c4d7",
+            "surface-container-high": "#eae7eb",
+            "secondary-fixed-dim": "#c7c5d0",
+            "inverse-surface": "#303033",
+            "tertiary-fixed": "#85f8c4",
+            "secondary-fixed": "#e3e1ec",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#62626b",
+            "on-tertiary-fixed": "#002114",
+            "inverse-on-surface": "#f3f0f4",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#372abf",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#46464f",
+            "on-background": "#1b1b1e",
+            "surface-dim": "#dcd9dd",
+            "primary-container": "#4338ca",
+            "on-secondary-fixed": "#1a1b23",
+            "on-tertiary": "#ffffff",
+            "surface": "#fbf8fc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "mono-code": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-citation": ["JetBrains Mono"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-citation": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-full font-body-md text-on-surface antialiased bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- ========================================================================= -->
+<!-- SIDE NAVIGATION (SideNavBar: Fixed Left Shell, 260px / w-64)              -->
+<!-- Active Tab: 'Evaluation Dashboard'                                        -->
+<!-- ========================================================================= -->
+<aside class="h-screen w-64 flex flex-col fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant z-40">
+<div class="w-64 h-full flex flex-col justify-between p-space-md">
+<!-- Top Brand Header & Navigation Items -->
+<div class="flex flex-col gap-space-md">
+<!-- Brand Identification -->
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="text-headline-md font-headline-md font-semibold text-primary tracking-tight">BrandMemory</span>
+<span class="px-1.5 py-0.5 rounded text-label-caps font-label-caps bg-primary-fixed text-primary font-bold">RAG</span>
+</div>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Kalyani Botanicals</span>
+</div>
+</div>
+<!-- Ingest CTA -->
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg text-body-sm font-body-sm hover:bg-surface-container-high transition-colors duration-150">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Ingest Document</span>
+</button>
+<!-- Navigation Links (7 predicted tabs) -->
+<nav class="flex flex-col gap-1 mt-1">
+<!-- Overview -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Brand Workspace -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span>Brand Workspace</span>
+</a>
+<!-- Knowledge Library -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span>Knowledge Library</span>
+</a>
+<!-- Content Studio -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span>Content Studio</span>
+</a>
+<!-- Retrieval Inspector -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+<span>Retrieval Inspector</span>
+</a>
+<!-- Evaluation Dashboard (ACTIVE MATCH) -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm bg-secondary-container text-primary rounded-lg font-headline-sm text-headline-sm translate-x-0.5 transition-transform duration-100 shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span>Evaluation Dashboard</span>
+</a>
+<!-- Conflict Review -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant rounded-lg font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">rule</span>
+<div class="flex items-center justify-between w-full">
+<span>Conflict Review</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+</a>
+</nav>
+</div>
+<!-- Footer User and Index Details -->
+<div class="border-t border-outline-variant pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant text-mono-citation font-mono-citation">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync</span>
+<span>Index Status (99.4%)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg hover:bg-surface-container-high transition-colors">
+<img class="w-8 h-8 rounded-full border border-outline-variant object-cover" data-alt="Professional clinical researcher portrait of Dr. Ananya Roy, Lead Brand Scientist at Kalyani Botanicals, wearing a modern structured minimal laboratory blazer with natural studio lighting and warm intellectual poise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKfQzmuSJwPR2iOdXLyDgTvs7hSzapnYlgn2RVzDQVc32WxrLGbOMKt-DvVWyweL73ua4DS4ROhzmCPsgONtY-E_mDN3ZflxAI9vcDCvIhCpJ7i_w1zS2b5DKH-sKGE5-MhazDdMQnIG2uZBqfcGTl9bMHoFEs2e4Wg9tkoQKoIB_1aJqmPXvMY8wRJDKPmfFzsecDvSJJukRtmXKMPqKqP7AVvwMWRgGZxcc4JQpX5dmuUkLQNzMA"/>
+<div class="flex flex-col">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface">Dr. Ananya Roy</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Lead Brand Scientist</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKBENCH CANVAS & TOP APP BAR                                       -->
+<!-- ========================================================================= -->
+<div class="ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar (Contextual Header) -->
+<header class="flex justify-between items-center w-full px-space-lg h-16 bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-30 shadow-sm">
+<!-- Left: Context Breadcrumb & Dataset State -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">Evaluation Benchmark Suite v3.2</span>
+<span class="text-outline-variant">/</span>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-mono-citation font-mono-citation border border-outline-variant">
+<span class="material-symbols-outlined text-[14px]">science</span>
+<span>Gold-Standard Clinical Test Suite (1,420 queries)</span>
+</div>
+</div>
+</div>
+<!-- Right: Action Cluster -->
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container-high text-body-sm font-body-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Report</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors text-body-sm font-body-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>+ Run New Evaluation Sweep</span>
+</button>
+<div class="h-5 w-[1px] bg-outline-variant mx-1"></div>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="System Settings">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</header>
+<!-- Subheader: Real Telemetry Mode Verification Banner -->
+<div class="px-space-lg py-2.5 bg-surface-bright border-b border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- Live Telemetry Pill Toggle Indicator -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary/10 text-tertiary border border-tertiary/30 text-mono-citation font-mono-citation font-semibold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span>Telemetry Mode: Live Production Telemetry</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          Real-world measurements across <strong class="text-on-surface font-semibold">1,420 queries</strong> in last 7 days — <span class="text-outline font-medium">Strict Verification Active (Not Mock Data)</span>
+</p>
+</div>
+<div class="flex items-center gap-4 text-mono-citation font-mono-citation text-on-surface-variant">
+<span>Baseline: <span class="text-on-surface font-mono-code font-semibold">BM25 Production Index</span></span>
+<span class="text-outline-variant">•</span>
+<span>Evaluator: <span class="text-on-surface font-mono-code font-semibold">Cross-Encoder NLI v2</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Verified Valid</span>
+</span>
+</div>
+</div>
+<!-- MAIN SCROLLABLE CONTENT AREA -->
+<main class="flex-1 p-space-lg space-y-space-lg max-w-[1700px] w-full">
+<!-- ===================================================================== -->
+<!-- TOP KPI METRICS CARDS (4-Column Bento Grid)                           -->
+<!-- ===================================================================== -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Recall@5 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">RETRIEVAL ACCURACY</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary/10 text-tertiary border border-tertiary/20 font-semibold">+3.2% vs BM25</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Recall@5 (Gold Citation Retrieval)</h3>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="text-display-lg font-display-lg text-primary tracking-tight">97.8%</span>
+<span class="text-mono-code font-mono-code text-on-surface-variant text-body-sm">/ 100%</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant">
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              Hybrid RRF retrieved correct source passage in top 5 slots for <strong class="text-on-surface">1,389 / 1,420</strong> queries.
+            </p>
+</div>
+</div>
+<!-- Card 2: Mean Reciprocal Rank (MRR) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">PASSAGE RANKING QUALITY</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed text-primary font-semibold">Rank #1.12 avg</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Mean Reciprocal Rank (MRR)</h3>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="text-display-lg font-display-lg text-on-surface tracking-tight">0.892</span>
+<span class="text-mono-citation font-mono-citation text-tertiary font-medium">↑ +0.151 lift</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant">
+<div class="flex items-center justify-between text-mono-citation font-mono-citation text-on-surface-variant mb-1">
+<span>Dense alone: <span class="font-mono-code font-semibold text-on-surface">0.741</span></span>
+<span>Keyword alone: <span class="font-mono-code font-semibold text-on-surface">0.612</span></span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              First relevant citation appears at average position <strong class="text-on-surface">#1.12</strong>.
+            </p>
+</div>
+</div>
+<!-- Card 3: Factual Groundedness / Hallucination Rate -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">FORENSIC SAFETY</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary/10 text-tertiary border border-tertiary/20 font-semibold">0.6% Hallucination</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Factual Groundedness</h3>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="text-display-lg font-display-lg text-tertiary tracking-tight">99.4%</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-medium">Grounded</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant">
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              Evaluated by <strong class="text-on-surface">Cross-Encoder NLI</strong> &amp; Strict Claim Verifier across 4,200 generated outputs.
+            </p>
+</div>
+</div>
+<!-- Card 4: p95 Retrieval Latency & Cost -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">PERFORMANCE &amp; INFERENCE</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant border border-outline-variant font-semibold">84.2% Cache Hit</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">p95 Latency &amp; Cost</h3>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="text-display-lg font-display-lg text-on-surface tracking-tight">118<span class="text-headline-md font-headline-md text-on-surface-variant">ms</span></span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">• $0.00042 / q</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant">
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              Vector cache hit rate: <strong class="text-on-surface">84.2%</strong> • Embedded on <span class="font-mono-citation text-on-surface font-semibold">text-embedding-3-large</span>.
+            </p>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- MAIN COMPARATIVE VISUALIZATION SECTION (2-Column Grid 50/50)           -->
+<!-- ===================================================================== -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- LEFT COLUMN: Retrieval Method Head-to-Head Comparison -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md border-b border-outline-variant gap-2">
+<div>
+<span class="text-label-caps font-label-caps text-primary tracking-wider">HEAD-TO-HEAD BENCHMARK</span>
+<h2 class="text-headline-md font-headline-md text-on-surface font-bold mt-0.5">Retrieval Method Performance</h2>
+</div>
+<!-- Legend Pills -->
+<div class="flex items-center gap-3 text-mono-citation font-mono-citation">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-outline"></span>
+<span class="text-on-surface-variant">BM25 (Keyword)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-primary-fixed-dim"></span>
+<span class="text-on-surface-variant">Dense (Vector)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-primary-container"></span>
+<span class="text-primary font-bold">Hybrid RRF</span>
+</div>
+</div>
+</div>
+<!-- Metric Comparison Rows -->
+<div class="mt-space-md space-y-space-md">
+<!-- Metric 1: Recall@1 -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Recall@1 (Top Rank Precision)</span>
+<div class="flex items-center gap-2">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Dense: 76.2% | BM25: 61.4%</span>
+<span class="px-1.5 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed text-primary font-semibold">Hybrid 88.4% (+12.2%)</span>
+</div>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-outline h-full" style="width: 61.4%" title="BM25: 61.4%"></div>
+<div class="bg-primary-fixed-dim h-full" style="width: 14.8%" title="Dense incremental: +14.8%"></div>
+<div class="bg-primary-container h-full" style="width: 12.2%" title="Hybrid RRF Winner: 88.4%"></div>
+</div>
+<div class="flex justify-between text-mono-citation font-mono-citation text-on-surface-variant pt-0.5">
+<span>0%</span>
+<span>50%</span>
+<span class="text-primary font-semibold">88.4% (Winner)</span>
+<span>100%</span>
+</div>
+</div>
+<!-- Metric 2: Recall@5 -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Recall@5 (Golden Context Inclusion)</span>
+<div class="flex items-center gap-2">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Dense: 89.1% | BM25: 78.5%</span>
+<span class="px-1.5 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary/10 text-tertiary font-semibold">Hybrid 97.8% (Winner)</span>
+</div>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-outline h-full" style="width: 78.5%" title="BM25: 78.5%"></div>
+<div class="bg-primary-fixed-dim h-full" style="width: 10.6%" title="Dense: 89.1%"></div>
+<div class="bg-primary-container h-full" style="width: 8.7%" title="Hybrid RRF: 97.8%"></div>
+</div>
+<div class="flex justify-between text-mono-citation font-mono-citation text-on-surface-variant pt-0.5">
+<span>0%</span>
+<span>BM25: 78.5%</span>
+<span>Dense: 89.1%</span>
+<span class="text-tertiary font-semibold">Hybrid: 97.8%</span>
+</div>
+</div>
+<!-- Metric 3: MRR -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Mean Reciprocal Rank (MRR Score)</span>
+<div class="flex items-center gap-2">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Dense: 0.741 | BM25: 0.612</span>
+<span class="px-1.5 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed text-primary font-semibold">Hybrid: 0.892</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2 rounded bg-surface-container border border-outline-variant">
+<span class="text-label-caps font-label-caps text-on-surface-variant">KEYWORD BM25</span>
+<p class="text-headline-sm font-mono-code font-bold text-on-surface mt-0.5">0.612</p>
+</div>
+<div class="p-2 rounded bg-surface-container border border-outline-variant">
+<span class="text-label-caps font-label-caps text-on-surface-variant">DENSE EMBED</span>
+<p class="text-headline-sm font-mono-code font-bold text-on-surface mt-0.5">0.741</p>
+</div>
+<div class="p-2 rounded bg-secondary-container border border-primary/20">
+<span class="text-label-caps font-label-caps text-primary font-bold">HYBRID RRF</span>
+<p class="text-headline-sm font-mono-code font-bold text-primary mt-0.5">0.892 ★</p>
+</div>
+</div>
+</div>
+<!-- Metric 4: Mean Latency -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Mean Latency (Lower is faster)</span>
+<div class="flex items-center gap-2">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Dense: 92ms | BM25: 24ms</span>
+<span class="px-1.5 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant">Hybrid: 118ms</span>
+</div>
+</div>
+<div class="h-2.5 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-tertiary h-full" style="width: 20%" title="BM25: 24ms"></div>
+<div class="bg-primary-fixed-dim h-full" style="width: 58%" title="Dense: 92ms"></div>
+<div class="bg-primary-container h-full" style="width: 22%" title="Hybrid overhead: 118ms total"></div>
+</div>
+</div>
+<!-- Metric 5: Non-English Entity Accuracy -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Non-English Entity Accuracy (Sanskrit &amp; Botanical terms)</span>
+<div class="flex items-center gap-2">
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Dense: 71.0% | BM25: 82.0%</span>
+<span class="px-1.5 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary/10 text-tertiary font-semibold">Hybrid: 96.4%</span>
+</div>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-outline h-full" style="width: 82.0%" title="BM25: 82%"></div>
+<div class="bg-primary-container h-full" style="width: 14.4%" title="Hybrid: 96.4%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Commentary Callout Box -->
+<div class="mt-space-md p-space-md rounded-lg bg-surface-container-low border border-outline-variant flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">psychology</span>
+<div class="space-y-1">
+<h4 class="text-headline-sm font-headline-sm text-on-surface text-[14px]">Why Hybrid RRF Wins for Kalyani Botanicals</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Keyword BM25 catches specific botanical terminology (<span class="font-mono-citation text-on-surface font-semibold">"Psoralea corylifolia"</span>, <span class="font-mono-citation text-on-surface font-semibold">"AYUSH Schedule E-1"</span>), while dense embeddings capture colloquial user queries (<span class="italic text-on-surface">"will this make my skin burn in the sun?"</span>). Combined RRF provides optimal coverage.
+              </p>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Live Failure Mode & Edge Case Analysis -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant">
+<div>
+<span class="text-label-caps font-label-caps text-error tracking-wider">ERROR MITIGATION &amp; SAFETY</span>
+<h2 class="text-headline-md font-headline-md text-on-surface font-bold mt-0.5">Live Failure Mode &amp; Edge Cases</h2>
+</div>
+<span class="px-2.5 py-1 rounded text-mono-citation font-mono-citation bg-error-container text-on-error-container font-semibold">
+                3 Flagged Queries
+              </span>
+</div>
+<!-- Case Item List -->
+<div class="mt-space-md space-y-space-md">
+<!-- Case 1: AHA/BHA chemical peels -->
+<div class="p-space-md rounded-lg border border-outline-variant bg-surface-container-lowest hover:border-error/40 transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-error-container text-on-error-container font-semibold">
+                        BLOCKED BY GUARDRAIL
+                      </span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Query ID: #Q-8491</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-on-surface font-medium pt-1">
+                      “Can Kumkumadi Oil be layered with AHA/BHA chemical peels?”
+                    </p>
+<div class="p-2 rounded bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant border border-outline-variant/60 mt-2">
+<span class="font-semibold text-error">Status: Low Grounding Confidence (0.68)</span> — No explicit contraindication in Library. Prompt generation blocked to prevent clinical misinformation.
+                    </div>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant text-mono-citation font-mono-citation text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                    Safety Mechanism: Confidence Threshold Gate (&lt;0.80)
+                  </span>
+<button class="text-primary hover:underline font-semibold flex items-center gap-0.5">
+                    Inspect Chunks <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Case 2: Bakuchiol purge breakouts -->
+<div class="p-space-md rounded-lg border border-outline-variant bg-surface-container-lowest hover:border-primary/40 transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary/10 text-tertiary font-semibold">
+                        RESOLVED BY SCIENCE LEAD
+                      </span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Query ID: #Q-7729</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-on-surface font-medium pt-1">
+                      “Does Bakuchiol trigger purge breakouts like retinol?”
+                    </p>
+<div class="p-2 rounded bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant border border-outline-variant/60 mt-2">
+<span class="font-semibold text-tertiary">Status: Resolved by Dr. Roy</span> — FAQ doc chunk added from In-Vivo Tolerance Clinical Trial (Batch #BK-2023).
+                    </div>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant text-mono-citation font-mono-citation text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">task_alt</span>
+                    Regression Test: Passed in Benchmark Suite v3.2
+                  </span>
+<span class="text-mono-code font-mono-code text-on-surface">KB-DOC-4921</span>
+</div>
+</div>
+<!-- Case 3: Pregnancy safe AYUSH -->
+<div class="p-space-md rounded-lg border border-outline-variant bg-surface-container-lowest hover:border-primary/40 transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1 flex-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed text-primary font-semibold">
+                        PASSED REGULATORY SHIELD
+                      </span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Query ID: #Q-9014</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-on-surface font-medium pt-1">
+                      “Is Bakuchiol pregnancy-safe under AYUSH guidelines?”
+                    </p>
+<div class="p-2 rounded bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant border border-outline-variant/60 mt-2">
+<span class="font-semibold text-primary">Status: Passed Regulatory Shield</span> — AYUSH Pharmacopoeial Monograph p.18 cited with mandatory advisory disclaimer.
+                    </div>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant text-mono-citation font-mono-citation text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">gavel</span>
+                    Compliance: AYUSH Schedule E-1 Exempt
+                  </span>
+<span class="text-mono-code font-mono-code text-on-surface">AYUSH-MONO-18</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="mt-space-md pt-space-sm border-t border-outline-variant">
+<button class="w-full flex items-center justify-center gap-2 py-2 px-space-md rounded-lg border border-outline-variant bg-surface-container hover:bg-surface-container-high text-on-surface text-body-sm font-body-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">playlist_add</span>
+<span>+ Add Query to Gold Regression Test Suite</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- BOTTOM SECTION: Recent Evaluation Runs & Model Experiment Ledger      -->
+<!-- ===================================================================== -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md border-b border-outline-variant gap-3">
+<div>
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">VERSION CONTROL &amp; AUDIT TRAIL</span>
+<h2 class="text-headline-md font-headline-md text-on-surface font-bold mt-0.5">Model Experiment &amp; Evaluation Ledger</h2>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant bg-surface-bright text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">filter_list</span>
+<span class="text-on-surface">Filter: Production &amp; Staging Runs</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant hover:bg-surface-container text-body-sm font-body-sm transition-colors">
+              Compare 2 Runs
+            </button>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="mt-space-md overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant bg-surface-container-low text-label-caps font-label-caps text-on-surface-variant">
+<th class="py-3 px-4 font-semibold">RUN ID</th>
+<th class="py-3 px-4 font-semibold">EXECUTION DATE</th>
+<th class="py-3 px-4 font-semibold">EMBEDDING MODEL</th>
+<th class="py-3 px-4 font-semibold">FUSION STRATEGY</th>
+<th class="py-3 px-4 font-semibold">RECALL@5</th>
+<th class="py-3 px-4 font-semibold">MRR</th>
+<th class="py-3 px-4 font-semibold">LATENCY</th>
+<th class="py-3 px-4 font-semibold">STATUS / DEPLOYMENT</th>
+<th class="py-3 px-4 font-semibold text-right">ACTIONS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<!-- Row 1: #RUN-892 (Current Production) -->
+<tr class="hover:bg-surface-bright transition-colors bg-secondary-container/15">
+<td class="py-3.5 px-4 font-mono-code font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>#RUN-892</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono-citation">Today, 08:30 UTC</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-mono-code text-on-surface font-medium">text-embedding-3-large</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface border border-outline-variant">
+                    RRF (k=60, Dense + BM25)
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code font-bold text-tertiary">97.8%</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">0.892</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">118ms</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-mono-citation font-mono-citation bg-tertiary/10 text-tertiary border border-tertiary/20 font-bold">
+                    Promoted to Production
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-primary hover:underline font-mono-citation font-semibold">View Artifacts</button>
+</td>
+</tr>
+<!-- Row 2: #RUN-884 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-3.5 px-4 font-mono-code font-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span>#RUN-884</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono-citation">Oct 24, 2024</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-mono-code text-on-surface font-medium">bge-large-en-v1.5</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant">
+                    Weighted Sum (0.6 Dense / 0.4 BM25)
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">94.1%</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">0.814</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">142ms</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant">
+                    Archived (Superseded)
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-on-surface-variant hover:text-on-surface font-mono-citation">View Artifacts</button>
+</td>
+</tr>
+<!-- Row 3: #RUN-879 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-3.5 px-4 font-mono-code font-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span>#RUN-879</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono-citation">Oct 19, 2024</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-mono-code text-on-surface font-medium">text-embedding-3-small</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-surface-container text-on-surface-variant">
+                    RRF (k=30, Dense + BM25)
+                  </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">91.6%</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">0.768</td>
+<td class="py-3.5 px-4 font-mono-code text-on-surface">64ms</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-error-container text-on-error-container">
+                    Rejected (Recall Threshold Fail)
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="text-on-surface-variant hover:text-on-surface font-mono-citation">View Artifacts</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Footer Summary -->
+<div class="mt-4 pt-3 border-t border-outline-variant flex flex-col sm:flex-row items-center justify-between text-mono-citation font-mono-citation text-on-surface-variant gap-2">
+<span>Showing 3 of 42 historical evaluation sweeps for Kalyani Botanicals production index.</span>
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-semibold">Strict Guardrail:</span>
+<span>Promotions require Recall@5 &gt; 96.0% and MRR &gt; 0.850</span>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrandMemory - Overview Dashboard (Kalyani Botanicals)</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#e4e1e6",
+            "surface-variant": "#e4e1e6",
+            "outline": "#777586",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#e0dee9",
+            "surface-container-low": "#f6f2f7",
+            "on-primary-container": "#c1beff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-surface": "#1b1b1e",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf8fc",
+            "on-tertiary-container": "#66daa8",
+            "tertiary-fixed-dim": "#68dba9",
+            "tertiary-container": "#005e40",
+            "on-surface-variant": "#464554",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-tint": "#5148d7",
+            "primary": "#2a14b4",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#e3dfff",
+            "on-primary-fixed": "#100069",
+            "background": "#fbf8fc",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0edf1",
+            "on-error": "#ffffff",
+            "tertiary": "#00442d",
+            "secondary": "#5e5e67",
+            "outline-variant": "#c7c4d7",
+            "surface-container-high": "#eae7eb",
+            "secondary-fixed-dim": "#c7c5d0",
+            "inverse-surface": "#303033",
+            "tertiary-fixed": "#85f8c4",
+            "secondary-fixed": "#e3e1ec",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#62626b",
+            "on-tertiary-fixed": "#002114",
+            "inverse-on-surface": "#f3f0f4",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#372abf",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#46464f",
+            "on-background": "#1b1b1e",
+            "surface-dim": "#dcd9dd",
+            "primary-container": "#4338ca",
+            "on-secondary-fixed": "#1a1b23",
+            "on-tertiary": "#ffffff",
+            "surface": "#fbf8fc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "mono-code": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-citation": ["JetBrains Mono"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-citation": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased h-full flex overflow-hidden">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 flex flex-col fixed left-0 top-0 border-r border-outline-variant bg-surface-container-low justify-between p-space-md z-40">
+<div class="flex flex-col gap-space-md">
+<!-- Brand & Workspace Header -->
+<div class="flex items-center gap-space-sm px-space-xs py-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-headline-sm">spa</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-headline-md font-headline-md font-semibold text-primary tracking-tight">BrandMemory</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="text-body-sm font-body-sm text-on-surface-variant truncate">Kalyani Botanicals</span>
+</div>
+</div>
+</div>
+<!-- Quick CTA -->
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md bg-surface-container-lowest border border-outline-variant rounded-lg text-primary hover:bg-surface-container-high transition-colors text-body-sm font-headline-sm">
+<span class="material-symbols-outlined text-headline-sm">upload_file</span>
+<span>+ Ingest Document</span>
+</button>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-1 mt-2">
+<!-- Overview (Active) -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm bg-secondary-container text-primary rounded-lg font-headline-sm text-headline-sm translate-x-0.5 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Brand Workspace -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-headline-sm">auto_stories</span>
+<span>Brand Workspace</span>
+</a>
+<!-- Knowledge Library -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-headline-sm">menu_book</span>
+<span>Knowledge Library</span>
+</a>
+<!-- Content Studio -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-headline-sm">edit_note</span>
+<span>Content Studio</span>
+</a>
+<!-- Retrieval Inspector -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-headline-sm">manage_search</span>
+<span>Retrieval Inspector</span>
+</a>
+<!-- Evaluation Dashboard -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-headline-sm">monitoring</span>
+<span>Evaluation Dashboard</span>
+</a>
+<!-- Conflict Review -->
+<a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg font-body-md text-body-md transition-colors duration-150" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-headline-sm">rule</span>
+<span>Conflict Review</span>
+</div>
+<span class="px-1.5 py-0.5 rounded text-mono-citation font-mono-citation bg-rose-100 text-rose-700 font-semibold">2</span>
+</a>
+</nav>
+</div>
+<!-- SideNav Footer -->
+<div class="flex flex-col gap-2 pt-space-sm border-t border-outline-variant">
+<div class="flex items-center justify-between px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-sm animate-spin" style="animation-duration: 8s;">sync</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Index Status (99.4%)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div class="flex items-center gap-space-sm px-space-sm py-1.5">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant border border-outline-variant">
+<span class="material-symbols-outlined text-body-sm">account_circle</span>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-body-sm font-headline-sm text-on-surface">Dr. Ananya Roy</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Lead Brand Scientist</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas Area -->
+<div class="flex-1 ml-64 flex flex-col h-screen overflow-hidden">
+<!-- TopNavBar Component -->
+<header class="h-16 w-full flex items-center justify-between px-space-lg bg-surface-container-lowest border-b border-outline-variant shadow-sm z-30">
+<!-- Left: Search & Model Badge -->
+<div class="flex items-center gap-space-md w-1/2">
+<div class="relative w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-headline-sm text-outline">search</span>
+<input class="w-full pl-9 pr-12 py-1.5 bg-surface-bright border border-outline-variant rounded-lg text-body-sm font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search claims, clinical trials, guidelines..." type="text"/>
+<kbd class="absolute right-2.5 top-2 px-1.5 py-0.5 text-label-caps font-label-caps bg-surface-container-high text-on-surface-variant rounded border border-outline-variant">⌘K</kbd>
+</div>
+<div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-bright border border-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Production Index • Synced 4m ago</span>
+</div>
+</div>
+<!-- Right: Trailing Actions -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1 border-r border-outline-variant pr-space-md text-on-surface-variant">
+<button class="p-1.5 rounded hover:bg-surface-container-high transition-colors" title="Notifications">
+<span class="material-symbols-outlined text-headline-sm">notifications</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high transition-colors" title="Documentation">
+<span class="material-symbols-outlined text-headline-sm">help_outline</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high transition-colors" title="Configuration">
+<span class="material-symbols-outlined text-headline-sm">tune</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-high text-on-surface rounded-lg text-body-sm font-headline-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-headline-sm">add</span>
+<span>Ingest Document</span>
+</button>
+<button class="px-space-md py-1.5 bg-primary-container hover:bg-primary text-on-primary rounded-lg text-body-sm font-headline-sm transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-headline-sm">spark</span>
+<span>New Studio Prompt</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Scrollable Workspace Dashboard -->
+<main class="flex-1 overflow-y-auto p-space-lg space-y-space-lg">
+<!-- Top Hero / Metrics Strip -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm hover:border-primary-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="text-label-caps font-label-caps tracking-wider text-outline">TOTAL VERIFIED KNOWLEDGE</span>
+<span class="material-symbols-outlined text-headline-sm text-primary">folder_supervised</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-headline-lg font-headline-lg text-on-surface">142 Documents</span>
+</div>
+<p class="text-mono-citation font-mono-citation text-on-surface-variant">
+            4.2M tokens indexed • <span class="text-emerald-700 font-semibold">98.6%</span> chunk coverage
+          </p>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm hover:border-primary-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="text-label-caps font-label-caps tracking-wider text-outline">ACTIVE CAMPAIGNS</span>
+<span class="material-symbols-outlined text-headline-sm text-primary">hub</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-headline-lg font-headline-lg text-on-surface">8 Live Flows</span>
+</div>
+<p class="text-mono-citation font-mono-citation text-on-surface-variant truncate">
+            Meta Ads, IG, Amazon IN, Sephora briefs
+          </p>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm hover:border-primary-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="text-label-caps font-label-caps tracking-wider text-outline">EVIDENCE VERIFICATION RATE</span>
+<span class="material-symbols-outlined text-headline-sm text-emerald-600">verified</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-headline-lg font-headline-lg text-emerald-700">99.4%</span>
+<span class="text-label-caps font-label-caps text-emerald-700 bg-emerald-50 px-1 rounded border border-emerald-200">0 Hallucinations</span>
+</div>
+<p class="text-mono-citation font-mono-citation text-on-surface-variant">
+            Last 24h • <span class="text-amber-700 font-semibold">2 conflicts</span> flagged for review
+          </p>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm hover:border-primary-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="text-label-caps font-label-caps tracking-wider text-outline">RETRIEVAL LATENCY</span>
+<span class="material-symbols-outlined text-headline-sm text-primary">bolt</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-headline-lg font-headline-lg text-on-surface">118ms</span>
+<span class="text-mono-citation font-mono-citation text-outline">p95</span>
+</div>
+<p class="text-mono-citation font-mono-citation text-on-surface-variant">
+            Hybrid RAG: 70% BM25 + 30% Dense e5
+          </p>
+</div>
+</section>
+<!-- Main Content 2-Column Asymmetric Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (65% / 8 cols) -->
+<div class="lg:col-span-8 space-y-space-lg">
+<!-- Section 1: Document Ingestion Pipeline Status Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-2">
+<span>Document Ingestion &amp; Processing Pipeline</span>
+<span class="px-2 py-0.5 rounded text-mono-citation font-mono-citation bg-primary-fixed text-primary font-semibold">Active Engine</span>
+</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Live status of canonical clinical manuals, regulatory protocols, and creative briefs.</p>
+</div>
+<button class="text-body-sm font-headline-sm text-primary hover:text-primary-container flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-headline-sm">refresh</span>
+<span>Re-index Vector Space</span>
+</button>
+</div>
+<div class="mt-space-md divide-y divide-outline-variant">
+<!-- Item 1 -->
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-headline-md">picture_as_pdf</span>
+<div>
+<span class="text-body-md font-headline-sm text-on-surface">Kalyani_Clinical_Trials_Bakuchiol_2024_v2.pdf</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.5 rounded text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200">READY</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">48 Chunks</span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">e5-large-v2</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-mono-citation font-mono-citation text-outline">Updated 2h ago</span>
+<button class="p-1 text-on-surface-variant hover:text-primary rounded">
+<span class="material-symbols-outlined text-headline-sm">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-headline-md">verified_user</span>
+<div>
+<span class="text-body-md font-headline-sm text-on-surface">AYUSH_Regulatory_Compliance_Standard_Q3.pdf</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.5 rounded text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200">READY</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">112 Chunks</span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">hybrid-sparse-dense</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-mono-citation font-mono-citation text-outline">Updated 6h ago</span>
+<button class="p-1 text-on-surface-variant hover:text-primary rounded">
+<span class="material-symbols-outlined text-headline-sm">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 3 (Indexing State with progress) -->
+<div class="py-3 flex items-center justify-between bg-surface-bright -mx-space-lg px-space-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-headline-md animate-pulse">sync</span>
+<div>
+<span class="text-body-md font-headline-sm text-on-surface">Kumkumadi_Night_Oil_Formulation_Spec_v3.1.docx</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.5 rounded text-label-caps font-label-caps bg-amber-50 text-amber-700 border border-amber-200">INDEXING 40%</span>
+<span class="text-mono-citation font-mono-citation text-amber-800 font-semibold">Chunk 24/60</span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">BM25 Tokenizing</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-44">
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">40%</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-headline-md">description</span>
+<div>
+<span class="text-body-md font-headline-sm text-on-surface">Diwali_2024_Omnichannel_Brief.md</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.5 rounded text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200">READY</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">14 Chunks</span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">e5-large-v2</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-mono-citation font-mono-citation text-outline">Updated 1d ago</span>
+<button class="p-1 text-on-surface-variant hover:text-primary rounded">
+<span class="material-symbols-outlined text-headline-sm">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Recent Generated Content & Evidence Grounding -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Recent Generated Content &amp; Evidence Grounding</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Every generated marketing asset is rigorously mapped against canonical brand trials and dossiers.</p>
+</div>
+<a class="text-body-sm font-headline-sm text-primary hover:text-primary-container flex items-center gap-1 transition-colors" href="#">
+<span>View all in Studio</span>
+<span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+</a>
+</div>
+<div class="mt-space-md space-y-space-md">
+<!-- Content Item 1 -->
+<div class="p-space-md rounded-lg border border-outline-variant hover:border-primary-container bg-surface-bright transition-all">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+                      VERIFIED 100%
+                    </span>
+<h3 class="text-body-md font-headline-sm text-on-surface">Bakuchiol 1% Botanical Alternative Serum - Meta Ad Carousel</h3>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline">Generated 22m ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-3 bg-surface-container-lowest p-space-sm rounded border border-outline-variant italic">
+                  "Target fine lines without retinol redness. Powered by Ayurvedic Psoralea corylifolia seed extracts validated in our 8-week clinical dermatological study <span class="text-primary-container font-mono-citation font-semibold">[KB-REF-04]</span>."
+                </p>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant text-body-sm">
+<div class="flex items-center gap-3">
+<span class="text-mono-citation font-mono-citation text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                      3 Citations linked (Clinical Trials Doc)
+                    </span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Tone: Clinical-Dermatological</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded border border-outline-variant transition-colors">Inspect Grounding</button>
+<button class="px-2.5 py-1 text-label-caps font-label-caps text-primary bg-primary-fixed hover:bg-secondary-container rounded font-semibold transition-colors">Open in Studio</button>
+</div>
+</div>
+</div>
+<!-- Content Item 2 (Needs Review) -->
+<div class="p-space-md rounded-lg border border-amber-300 bg-amber-50/20 transition-all">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-label-caps font-label-caps bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">warning</span>
+                      REVIEW NEEDED
+                    </span>
+<h3 class="text-body-md font-headline-sm text-on-surface">Kumkumadi Glow Elixir - Festive Amazon Storefront Copy</h3>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline">Generated 1h ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-3 bg-surface-container-lowest p-space-sm rounded border border-outline-variant">
+                  "...Infused with pure Kashmiri saffron <span class="bg-rose-100 text-rose-800 font-semibold px-1 rounded border-b-2 border-dashed border-rose-500">at 12% concentration</span> for restorative night brightness..."
+                </p>
+<div class="flex items-center justify-between pt-2 border-t border-amber-200 text-body-sm">
+<div class="flex items-center gap-3">
+<span class="text-mono-citation font-mono-citation text-rose-700 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">error</span>
+                      1 Outdated Claim on Saffron % vs v3.1 spec
+                    </span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">2 Citations</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-caps font-label-caps text-rose-700 bg-rose-50 hover:bg-rose-100 rounded border border-rose-200 transition-colors">Fix in Studio</button>
+</div>
+</div>
+</div>
+<!-- Content Item 3 -->
+<div class="p-space-md rounded-lg border border-outline-variant hover:border-primary-container bg-surface-bright transition-all">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-label-caps font-label-caps bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+                      VERIFIED 100%
+                    </span>
+<h3 class="text-body-md font-headline-sm text-on-surface">Gotu Kola Barrier Repair Cream - Influencer PR Seed Note</h3>
+</div>
+<span class="text-mono-citation font-mono-citation text-outline">Generated 3h ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-3 bg-surface-container-lowest p-space-sm rounded border border-outline-variant italic">
+                  "Centella Asiatica meets traditional cold-pressed sesame lipid matrices for compromised barriers. Zero synthetic fragrance."
+                </p>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant text-body-sm">
+<div class="flex items-center gap-3">
+<span class="text-mono-citation font-mono-citation text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">link</span>
+                      4 Citations linked
+                    </span>
+<span class="text-outline">•</span>
+<span class="text-mono-citation font-mono-citation text-on-surface-variant">Tone: Sensual-Clean Botanical</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded border border-outline-variant transition-colors">Inspect Grounding</button>
+<button class="px-2.5 py-1 text-label-caps font-label-caps text-primary bg-primary-fixed hover:bg-secondary-container rounded font-semibold transition-colors">Open in Studio</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (35% / 4 cols) -->
+<div class="lg:col-span-4 space-y-space-lg">
+<!-- Card 1: Retrieval Health & Verification Quality -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant mb-space-md">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Retrieval &amp; Quality Health</h2>
+<span class="material-symbols-outlined text-primary text-headline-sm">analytics</span>
+</div>
+<!-- Visual gauges & progress bars -->
+<div class="space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-body-sm font-body-sm text-on-surface">Groundedness Score</span>
+<span class="text-mono-code font-mono-code font-semibold text-emerald-700">99.2%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-emerald-600 h-2 rounded-full" style="width: 99.2%"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-body-sm font-body-sm text-on-surface">Citation Recall</span>
+<span class="text-mono-code font-mono-code font-semibold text-primary">97.8%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full" style="width: 97.8%"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-body-sm font-body-sm text-on-surface">Negative Constraint Compliance</span>
+<span class="text-mono-code font-mono-code font-semibold text-emerald-700">100%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-emerald-600 h-2 rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-label-caps font-label-caps text-outline mt-1 block">0 prohibited phrases leaked</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-body-sm font-body-sm text-on-surface">Hybrid Ranking Divergence</span>
+<span class="text-mono-code font-mono-code font-semibold text-on-surface-variant">4.1%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-outline h-2 rounded-full" style="width: 4.1%"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant">
+<p class="text-mono-citation font-mono-citation text-outline">
+                Measured on 1,420 test queries across 4 live pipelines. (Real telemetry)
+              </p>
+</div>
+</div>
+<!-- Card 2: Active Attention Items & Conflicts -->
+<div class="bg-surface-container-lowest border-2 border-amber-300 rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-2 border-b border-amber-200 mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-headline-sm">warning</span>
+<h2 class="text-headline-sm font-headline-sm text-amber-900">2 Conflicting Claims Detected</h2>
+</div>
+</div>
+<div class="p-space-sm bg-amber-50/50 rounded border border-amber-200 mb-space-md">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+<span class="text-label-caps font-label-caps text-rose-800 font-bold">DISCREPANCY ALERT</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface leading-snug">
+                Bakuchiol concentration stated as <span class="font-semibold text-rose-800">1.5%</span> in older 2023 press release vs <span class="font-semibold text-emerald-800">1.0%</span> in 2024 Formulatory Doc.
+              </p>
+<div class="mt-2 text-mono-citation font-mono-citation text-on-surface-variant">
+                Sources: KB-PR-2023-08 vs KB-CLIN-2024-v2
+              </div>
+</div>
+<a class="w-full py-2 px-3 bg-amber-600 hover:bg-amber-700 text-white rounded text-body-sm font-headline-sm transition-colors flex items-center justify-center gap-1" href="#">
+<span>Resolve in Conflict Review</span>
+<span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3: Brand Voice Guardrails Active -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant mb-3">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Brand Voice Guardrails Active</h2>
+<span class="material-symbols-outlined text-emerald-600 text-headline-sm">shield</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-space-md">
+              Prohibited medical and unsubstantiated Ayurvedic marketing claims intercepted at model decoding stage:
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 text-label-caps font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-mono-citation">block</span>
+                "Anti-aging magic"
+              </span>
+<span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 text-label-caps font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-mono-citation">block</span>
+                "100% cure"
+              </span>
+<span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 text-label-caps font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-mono-citation">block</span>
+                "Chemical-free"
+              </span>
+<span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 text-label-caps font-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-mono-citation">block</span>
+                "Zero side-effects"
+              </span>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant flex items-center justify-between text-mono-citation font-mono-citation text-on-surface-variant">
+<span>Strict AYUSH Regulatory Filter</span>
+<span class="text-emerald-700 font-semibold">Active &amp; Enforcing</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
